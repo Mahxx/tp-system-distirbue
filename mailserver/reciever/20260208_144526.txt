@@ -1,0 +1,8 @@
+From: ahmed@zmaill.com
+To: reciever@zmaill.com
+Date: Sun, 08 Feb 2026 14:45:26 -0500
+Subject: Test Email
+
+Hello Reciever,
+This zmail is just a test2 .
+Ahmed
