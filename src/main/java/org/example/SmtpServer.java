@@ -6,7 +6,7 @@ import java.util.*;
 
 public class SmtpServer {
     // Use a custom port (e.g., 2525) to avoid needing special privileges.
-    private static final int PORT = 25;
+    private static final int PORT = 2525;
 
     public static void main(String[] args) {
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
@@ -131,6 +131,7 @@ class SmtpSession extends Thread {
         // puis d'une adresse email entre chevrons et rien d'autre.
         if (!arg.toUpperCase().matches("^FROM:\\s*<[^>]+>$")) {
             out.println("501 Syntax error in parameters or arguments");
+            out.println(arg.toUpperCase());
             return;
         }
         // Extraire l'adresse email en retirant "FROM:" et les chevrons.
