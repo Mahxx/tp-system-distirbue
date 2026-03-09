@@ -22,7 +22,7 @@ public class ImapServer {
                 Socket client = server.accept();
                 System.out.println("Client connected: " + client.getInetAddress());
 
-                new ImapSession(client).start();
+                new ImapSession(client).start(); // thread indépendant par client
             }
 
         } catch (IOException e) {
