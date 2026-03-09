@@ -1,25 +1,26 @@
-[10:07:55] IMAP Server started on port 1430
-[10:08:06] Client connected: /0:0:0:0:0:0:0:1
-[10:08:06] Server -> * OK IMAP4rev2 Service Ready
-[10:08:45] Client -> A001 LOGIN user pass
-[10:08:45] Server -> A001 NO Authentication failed
-[10:09:11] Client -> A[2~[2~001 LOGIN reciever pass
-[10:09:11] Server -> A[2~[2~001 OK LOGIN completed
-[10:09:22] Client -> A002 SELECT INBOX
-[10:09:22] Server -> * 5 EXISTS
-[10:09:22] Server -> * FLAGS (\Seen)
-[10:09:22] Server -> A002 OK [READ-WRITE] SELECT completed
-[10:09:33] Client -> A003 FETCH 1 BODY[]
-[10:09:33] Server -> * 1 FETCH (BODY[] {163}
-[10:09:33] Server -> From: ahmed@zmaill.com
-[10:09:33] Server -> To: reciever@zmaill.com
-[10:09:33] Server -> Date: Sun, 08 Feb 2026 14:09:44 -0500
-[10:09:33] Server -> Subject: Test Email
-[10:09:33] Server -> 
-[10:09:33] Server -> Hello Reciever,
-[10:09:33] Server -> This zmail is just a test.
-[10:09:33] Server -> Ahmed
-[10:09:33] Server -> )
-[10:09:33] Server -> A003 OK FETCH completed
-[10:09:37] Client -> nononono
-[10:09:37] Server -> nononono BAD Unknown command
+[10:32:19] IMAP Server started on port 1430
+[10:32:23] /[0:0:0:0:0:0:0:1]:62789 connected
+[10:32:23] Server -> * OK IMAP4rev2 Service Ready
+[10:32:48] /[0:0:0:0:0:0:0:1]:62789 -> A001 LOGIN user pass
+[10:32:48] Server -> A001 NO Authentication failed
+[10:33:03] /[0:0:0:0:0:0:0:1]:62789 -> A001 LOGIN reciever pass
+[10:33:03] Server -> A001 OK LOGIN completed
+[10:33:11] /[0:0:0:0:0:0:0:1]:62789 -> A002 SELECT INBOX
+[10:33:11] Server -> * 5 EXISTS
+[10:33:11] Server -> * FLAGS (\Seen)
+[10:33:11] Server -> A002 OK [READ-WRITE] SELECT completed
+[10:33:19] /[0:0:0:0:0:0:0:1]:62789 -> A003 FETCH 1 BODY[]
+[10:33:19] Server -> * /[0:0:0:0:0:0:0:1]:62789 1 FETCH (BODY[] {163}
+[10:33:19] Server -> From: ahmed@zmaill.com
+[10:33:19] Server -> To: reciever@zmaill.com
+[10:33:19] Server -> Date: Sun, 08 Feb 2026 14:09:44 -0500
+[10:33:19] Server -> Subject: Test Email
+[10:33:19] Server -> 
+[10:33:19] Server -> Hello Reciever,
+[10:33:19] Server -> This zmail is just a test.
+[10:33:19] Server -> Ahmed
+[10:33:19] Server -> )
+[10:33:19] Server -> A003 OK FETCH completed
+[10:33:31] Stopping server...
+[10:33:31] All client connections closed
+[10:33:31] Server stopped

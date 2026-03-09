@@ -95,7 +95,7 @@ public class SmtpServerGUI {
                     try {
                         Socket client = serverSocket.accept();
                         addClient(client);
-                        log("Client connected: " + client.getInetAddress());
+                        log(client.getRemoteSocketAddress() + " connected");
                         new SmtpSessionGUI(client, this).start();
                     } catch (SocketException e) {
                         if (!running) break;
@@ -141,7 +141,6 @@ public class SmtpServerGUI {
         SwingUtilities.invokeLater(() -> clientLabel.setText("Connected clients: " + clientCount));
     }
 
-    // Thread-safe methods for session threads
     public void addClient(Socket client) {
         clients.add(client);
         clientCount++;
@@ -193,6 +192,10 @@ class SmtpSessionGUI extends Thread {
 
             String line;
             while (gui.isRunning() && (line = in.readLine()) != null) {
+
+                // Log every incoming client command with IP:port
+                gui.log(clientId() + " -> " + line);
+
                 if (state == SmtpState.DATA_RECEIVING) {
                     if (line.equals(".")) {
                         storeEmail(dataBuffer.toString());
@@ -219,16 +222,20 @@ class SmtpSessionGUI extends Thread {
             }
 
         } catch (IOException e) {
-            gui.log("Client disconnected");
+            gui.log(clientId() + " disconnected");
         } finally {
             try { socket.close(); } catch (IOException ignored) {}
             gui.removeClient(socket);
         }
     }
 
+    private String clientId() {
+        return socket.getRemoteSocketAddress().toString();
+    }
+
     private void send(String message) {
         out.println(message);
-        gui.log("Server -> " + message);
+        gui.log(clientId() + " -> " + message);
     }
 
     private void handleHelo(String arg) {
@@ -283,9 +290,9 @@ class SmtpSessionGUI extends Thread {
                 writer.println("Subject: Test Email");
                 writer.println();
                 writer.print(data);
-                gui.log("Stored email for " + recipient + " in " + emailFile.getAbsolutePath());
+                gui.log(clientId() + " Stored email for " + recipient + " in " + emailFile.getAbsolutePath());
             } catch (IOException e) {
-                gui.log("Error storing email: " + e.getMessage());
+                gui.log(clientId() + " Error storing email: " + e.getMessage());
             }
         }
     }

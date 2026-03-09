@@ -92,7 +92,7 @@ public class ImapServerGUI {
                     try {
                         Socket client = serverSocket.accept();
                         addClient(client);
-                        log("Client connected: " + client.getInetAddress());
+                        log(client.getRemoteSocketAddress() + " connected");
                         new ImapSessionGUI(client, this).start();
                     } catch (SocketException e) {
                         if (!running) break;
@@ -171,6 +171,10 @@ class ImapSessionGUI extends Thread {
         this.gui = gui;
     }
 
+    private String clientId() {
+        return socket.getRemoteSocketAddress().toString();
+    }
+
     @Override
     public void run() {
         try {
@@ -181,7 +185,7 @@ class ImapSessionGUI extends Thread {
 
             String line;
             while ((line = in.readLine()) != null) {
-                gui.log("Client -> " + line);
+                gui.log(clientId() + " -> " + line);
                 String[] parts = line.split(" ", 3);
                 String tag = parts[0];
                 String command = parts.length > 1 ? parts[1].toUpperCase() : "";
@@ -198,7 +202,7 @@ class ImapSessionGUI extends Thread {
                 }
             }
         } catch (Exception e) {
-            gui.log("Session closed unexpectedly");
+            gui.log(clientId() + " session closed unexpectedly");
         } finally {
             try { socket.close(); } catch (IOException ignored) {}
             gui.removeClient(socket);
@@ -244,10 +248,10 @@ class ImapSessionGUI extends Thread {
 
         if (args.toUpperCase().contains("FLAGS")) {
             boolean seen = seenFlags.get(id);
-            send("* " + id + " FETCH (FLAGS " + (seen ? "(\\Seen)" : "()") + ")");
+            send("* " + clientId() + " " + id + " FETCH (FLAGS " + (seen ? "(\\Seen)" : "()") + ")");
         } else if (args.toUpperCase().contains("BODY[]")) {
             List<String> lines = Files.readAllLines(mail.toPath());
-            send("* " + id + " FETCH (BODY[] {" + mail.length() + "}");
+            send("* " + clientId() + " " + id + " FETCH (BODY[] {" + mail.length() + "}");
             for (String l : lines) send(l);
             send(")");
             seenFlags.put(id, true);
@@ -261,7 +265,7 @@ class ImapSessionGUI extends Thread {
         String[] p = args.split(" ");
         int id = Integer.parseInt(p[0]);
         seenFlags.put(id, true);
-        send("* " + id + " FETCH (FLAGS (\\Seen))");
+        send("* " + clientId() + " " + id + " FETCH (FLAGS (\\Seen))");
         send(tag + " OK STORE completed");
     }
 
@@ -273,12 +277,12 @@ class ImapSessionGUI extends Thread {
             String content = Files.readString(messages.get(i).toPath());
             if (content.contains(keyword)) result.append(i + 1).append(" ");
         }
-        send("* SEARCH " + result.toString().trim());
+        send("* " + clientId() + " SEARCH " + result.toString().trim());
         send(tag + " OK SEARCH completed");
     }
 
     private void cmdLOGOUT(String tag) {
-        send("* BYE IMAP4rev2 Server logging out");
+        send("* BYE " + clientId() + " IMAP4rev2 Server logging out");
         send(tag + " OK LOGOUT completed");
         state = State.LOGOUT;
     }

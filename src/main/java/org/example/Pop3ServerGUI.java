@@ -96,7 +96,7 @@ public class Pop3ServerGUI {
                     try {
                         Socket client = serverSocket.accept();
                         addClient(client);
-                        log("Client connected: " + client.getInetAddress());
+                        log(client.getRemoteSocketAddress() + " connected");
                         new Pop3SessionGUI(client, this).start();
                     } catch (SocketException e) {
                         if (!running) break;
@@ -174,6 +174,10 @@ class Pop3SessionGUI extends Thread {
         this.authenticated = false;
     }
 
+    private String clientId() {
+        return socket.getRemoteSocketAddress().toString();
+    }
+
     @Override
     public void run() {
         try {
@@ -184,7 +188,7 @@ class Pop3SessionGUI extends Thread {
 
             String line;
             while ((line = in.readLine()) != null) {
-                gui.log("Client -> " + line);
+                gui.log(clientId() + " -> " + line);
                 String[] parts = line.split(" ", 2);
                 String command = parts[0].toUpperCase();
                 String argument = parts.length > 1 ? parts[1] : "";
@@ -201,9 +205,9 @@ class Pop3SessionGUI extends Thread {
                     default: send("-ERR Unknown command"); break;
                 }
             }
-            if (authenticated) gui.log("Connection interrupted without QUIT.");
+            if (authenticated) gui.log(clientId() + " connection interrupted without QUIT.");
         } catch (IOException e) {
-            gui.log("Client disconnected unexpectedly");
+            gui.log(clientId() + " disconnected unexpectedly");
         } finally {
             try { socket.close(); } catch (IOException ignored) {}
             gui.removeClient(socket);
@@ -212,7 +216,7 @@ class Pop3SessionGUI extends Thread {
 
     private void send(String message) {
         out.println(message);
-        gui.log("Server -> " + message);
+        gui.log(clientId() + " -> " + message);
     }
 
     private void handleUser(String arg) {
@@ -286,8 +290,8 @@ class Pop3SessionGUI extends Thread {
         for (int i = deletionFlags.size() - 1; i >= 0; i--) {
             if (deletionFlags.get(i)) {
                 File emailFile = emails.get(i);
-                if (emailFile.delete()) gui.log("Deleted email: " + emailFile.getAbsolutePath());
-                else gui.log("Failed to delete email: " + emailFile.getAbsolutePath());
+                if (emailFile.delete()) gui.log(clientId() + " Deleted email: " + emailFile.getAbsolutePath());
+                else gui.log(clientId() + " Failed to delete email: " + emailFile.getAbsolutePath());
             }
         }
         send("+OK POP3 server signing off");
