@@ -1,0 +1,24 @@
+[10:04:33] POP3 Server started on port 110
+[10:04:40] Client connected: /0:0:0:0:0:0:0:1
+[10:04:40] Server -> +OK POP3 server ready
+[10:05:02] Client -> USER reciever
+[10:05:02] Server -> +OK User accepted
+[10:05:05] Client -> sdkfh
+[10:05:05] Server -> -ERR Unknown command
+[10:05:12] Client -> PASS anything
+[10:05:12] Server -> +OK Password accepted
+[10:05:21] Client -> STAT
+[10:05:21] Server -> +OK 5 793
+[10:05:30] Client -> RETR 1
+[10:05:31] Server -> +OK 163 octets
+[10:05:31] Server -> From: ahmed@zmaill.com
+[10:05:31] Server -> To: reciever@zmaill.com
+[10:05:31] Server -> Date: Sun, 08 Feb 2026 14:09:44 -0500
+[10:05:31] Server -> Subject: Test Email
+[10:05:31] Server -> 
+[10:05:31] Server -> Hello Reciever,
+[10:05:31] Server -> This zmail is just a test.
+[10:05:31] Server -> Ahmed
+[10:05:31] Server -> .
+[10:05:32] Client -> lskdasd;
+[10:05:32] Server -> -ERR Unknown command

@@ -1,0 +1,52 @@
+[09:44:32] SMTP Server started on port 25
+[09:44:39] Client connected: /0:0:0:0:0:0:0:1
+[09:44:39] Server -> 220 smtp.example.com Service Ready
+[09:44:48] Client connected: /0:0:0:0:0:0:0:1
+[09:44:48] Server -> 220 smtp.example.com Service Ready
+[09:44:53] Client -> USER sdfj
+[09:44:53] Server -> 250 OK
+[09:44:56] Client -> ksjflsfjk
+[09:44:56] Server -> 250 OK
+[09:45:01] Client -> jkkjajkasjksakjas
+[09:45:01] Server -> 250 OK
+[09:45:03] Client -> d;aka;fks;dkf;skf;sf
+[09:45:03] Server -> 250 OK
+[09:45:16] Stopping server...
+[09:45:16] All client connections closed
+[09:45:16] Server stopped
+[09:50:34] SMTP Server started on port 2525
+[09:50:38] Client connected: /0:0:0:0:0:0:0:1
+[09:50:38] Client disconnected: /0:0:0:0:0:0:0:1
+[09:50:41] Stopping server...
+[09:50:41] All client connections closed
+[09:50:41] Server stopped
+[09:50:58] SMTP Server started on port 25
+[09:51:01] Client connected: /0:0:0:0:0:0:0:1
+[09:51:01] Server -> 220 smtp.example.com Service Ready
+[09:51:05] Client -> HELLO
+[09:51:05] Server -> 250 OK
+[09:51:10] Stopping server...
+[09:51:10] All client connections closed
+[09:51:10] Server stopped
+[09:57:35] SMTP Server started on port 25
+[09:57:38] Client connected: /0:0:0:0:0:0:0:1
+[09:57:38] Server -> 220 smtp.example.com Service Ready
+[09:57:42] Client connected: /0:0:0:0:0:0:0:1
+[09:57:42] Server -> 220 smtp.example.com Service Ready
+[09:57:45] Server -> 500 Command unrecognized
+[09:57:51] Server -> 500 Command unrecognized
+[09:58:53] Server -> 250 Hello client.example.com
+[09:59:10] Server -> 250 OK
+[09:59:19] Server -> 500 Command unrecognized
+[09:59:25] Server -> 500 Command unrecognized
+[09:59:27] Stopping server...
+[09:59:27] All client connections closed
+[09:59:27] Server stopped
+[10:00:31] SMTP Server started on port 25
+[10:00:34] Client connected: /0:0:0:0:0:0:0:1
+[10:00:34] Server -> 220 smtp.example.com Service Ready
+[10:00:37] Client connected: /0:0:0:0:0:0:0:1
+[10:00:37] Server -> 220 smtp.example.com Service Ready
+[10:00:56] Server -> 250 Hello client.example.com
+[10:01:02] Server -> 250 OK
+[10:01:05] Server -> 500 Command unrecognized
