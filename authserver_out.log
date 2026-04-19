@@ -1,0 +1,7 @@
+[AuthServer] Registre RMI demarre sur le port 1099
+[AuthServiceImpl] Connecte a la base de donnees MySQL.
+[AuthServer] Service 'AuthService' enregistre.
+[AuthServer] Comptes stockes dans : MySQL (messagerie_db.users)
+[AuthServer] En attente de connexions...
+[Auth] createUser(rmitest) -> OK
+[Auth] createUser(zrfzaf) -> OK

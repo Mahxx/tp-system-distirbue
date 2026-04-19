@@ -14,3 +14,1225 @@
 [10:27:36] Stopping server...
 [10:27:36] All client connections closed
 [10:27:36] Server stopped
+[12:44:17] Server error: Address already in use: bind
+[12:44:23] Stopping server...
+[12:44:23] All client connections closed
+[12:44:23] Server stopped
+[12:44:27] Server error: Address already in use: bind
+[12:50:19] SMTP Server started on port 25
+[12:50:34] /[0:0:0:0:0:0:0:1]:65396 connected
+[12:50:34] /[0:0:0:0:0:0:0:1]:65396 -> 220 smtp.example.com Service Ready
+[12:51:22] /[0:0:0:0:0:0:0:1]:65396 -> HELLOO
+[12:51:22] /[0:0:0:0:0:0:0:1]:65396 -> 500 Command unrecognized
+[12:51:28] /[0:0:0:0:0:0:0:1]:65396 -> HELO USER1
+[12:51:28] /[0:0:0:0:0:0:0:1]:65396 -> 250 Hello USER1
+[12:54:32] Stopping server...
+[12:54:32] All client connections closed
+[12:54:32] Server stopped
+[15:05:50] SMTP Server started on port 25
+[15:05:57] /[0:0:0:0:0:0:0:1]:52642 connected
+[15:05:57] /[0:0:0:0:0:0:0:1]:52642 <- 220 smtp.example.com Service Ready
+[15:07:49] /[0:0:0:0:0:0:0:1]:52642 -> test
+[15:07:49] /[0:0:0:0:0:0:0:1]:52642 <- 500 Command unrecognized
+[15:07:52] /[0:0:0:0:0:0:0:1]:52642 -> helo
+[15:07:52] /[0:0:0:0:0:0:0:1]:52642 <- 250 Hello 
+[15:07:59] /[0:0:0:0:0:0:0:1]:52642 -> test
+[15:07:59] /[0:0:0:0:0:0:0:1]:52642 <- 500 Command unrecognized
+[15:08:15] /[0:0:0:0:0:0:0:1]:52642 -> MAIL FROM:<mah@test.com>
+[15:08:15] /[0:0:0:0:0:0:0:1]:52642 Connecté au service RMI
+[15:08:15] /[0:0:0:0:0:0:0:1]:52642 RMI userExists(mah) -> false
+[15:08:15] /[0:0:0:0:0:0:0:1]:52642 <- 550 Sender rejected: unknown user 'mah'
+[15:15:10] /[0:0:0:0:0:0:0:1]:52642 -> [A[Aquit
+[15:15:10] /[0:0:0:0:0:0:0:1]:52642 <- 500 Command unrecognized
+[15:15:12] /[0:0:0:0:0:0:0:1]:52642 -> QUIT
+[15:15:12] /[0:0:0:0:0:0:0:1]:52642 <- 221 smtp.example.com Service closing transmission channel
+[10:52:20] SMTP Server started on port 25
+[10:55:12] /[0:0:0:0:0:0:0:1]:54612 connected
+[10:55:12] /[0:0:0:0:0:0:0:1]:54612 <- 220 smtp.example.com Service Ready
+[10:55:17] /[0:0:0:0:0:0:0:1]:54612 -> HELO mahmoud
+[10:55:17] /[0:0:0:0:0:0:0:1]:54612 <- 250 Hello mahmoud
+[10:55:35] /[0:0:0:0:0:0:0:1]:54612 -> quit
+[10:55:35] /[0:0:0:0:0:0:0:1]:54612 <- 500 Command unrecognized
+[10:55:38] /[0:0:0:0:0:0:0:1]:54612 -> quit
+[10:55:38] /[0:0:0:0:0:0:0:1]:54612 <- 221 smtp.example.com Service closing transmission channel
+[10:55:56] /[0:0:0:0:0:0:0:1]:54626 connected
+[10:55:56] /[0:0:0:0:0:0:0:1]:54626 <- 220 smtp.example.com Service Ready
+[10:56:01] /[0:0:0:0:0:0:0:1]:54626 -> helo mahmoud
+[10:56:01] /[0:0:0:0:0:0:0:1]:54626 <- 250 Hello mahmoud
+[10:56:22] /[0:0:0:0:0:0:0:1]:54626 -> MAIL FROM: <mahmoud@domain.com>
+[10:56:22] /[0:0:0:0:0:0:0:1]:54626 Connecté au service RMI
+[10:56:22] /[0:0:0:0:0:0:0:1]:54626 RMI userExists(mahmoud) -> true
+[10:56:22] /[0:0:0:0:0:0:0:1]:54626 <- 250 OK
+[10:57:05] /[0:0:0:0:0:0:0:1]:54626 -> RCPT TO: <mahmoud@domain.com>
+[10:57:05] /[0:0:0:0:0:0:0:1]:54626 <- 250 OK
+[10:57:14] /[0:0:0:0:0:0:0:1]:54626 -> bonhjoiur a tout
+[10:57:14] /[0:0:0:0:0:0:0:1]:54626 <- 500 Command unrecognized
+[10:57:20] /[0:0:0:0:0:0:0:1]:54626 -> DATA
+[10:57:20] /[0:0:0:0:0:0:0:1]:54626 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[10:57:26] /[0:0:0:0:0:0:0:1]:54626 -> BONNOUR A TOUT
+[10:57:29] /[0:0:0:0:0:0:0:1]:54626 -> .
+[10:57:29] /[0:0:0:0:0:0:0:1]:54626 Error storing email: mailserver\<mahmoud\20260405_105729.txt (La syntaxe du nom de fichier, de répertoire ou de volume est incorrecte)
+[10:57:29] /[0:0:0:0:0:0:0:1]:54626 <- 250 OK: Message accepted for delivery
+[10:57:35] /[0:0:0:0:0:0:0:1]:54626 -> QUIT
+[10:57:35] /[0:0:0:0:0:0:0:1]:54626 <- 221 smtp.example.com Service closing transmission channel
+[11:11:21] SMTP Server started on port 25
+[11:11:54] /[0:0:0:0:0:0:0:1]:54886 connected
+[11:11:54] /[0:0:0:0:0:0:0:1]:54886 <- 220 smtp.example.com Service Ready
+[11:12:00] /[0:0:0:0:0:0:0:1]:54886 -> HELO mahmoud
+[11:12:00] /[0:0:0:0:0:0:0:1]:54886 <- 250 Hello mahmoud
+[11:12:21] /[0:0:0:0:0:0:0:1]:54886 -> MAIL FROM: <mahmoud@domain.com>
+[11:12:22] /[0:0:0:0:0:0:0:1]:54886 Connecté au service RMI
+[11:12:22] /[0:0:0:0:0:0:0:1]:54886 RMI userExists(mahmoud) -> true
+[11:12:22] /[0:0:0:0:0:0:0:1]:54886 <- 250 OK
+[11:12:29] /[0:0:0:0:0:0:0:1]:54886 -> RCPT TO: <mahmoud@domain.com>
+[11:12:29] /[0:0:0:0:0:0:0:1]:54886 <- 250 OK
+[11:12:35] /[0:0:0:0:0:0:0:1]:54886 -> data
+[11:12:35] /[0:0:0:0:0:0:0:1]:54886 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[11:12:39] /[0:0:0:0:0:0:0:1]:54886 -> mahmoud
+[11:12:40] /[0:0:0:0:0:0:0:1]:54886 -> .
+[11:12:42] /[0:0:0:0:0:0:0:1]:54886 Stored email for <mahmoud@domain.com> in Database
+[11:12:42] /[0:0:0:0:0:0:0:1]:54886 <- 250 OK: Message accepted for delivery
+[11:12:44] /[0:0:0:0:0:0:0:1]:54886 -> quit
+[11:12:44] /[0:0:0:0:0:0:0:1]:54886 <- 221 smtp.example.com Service closing transmission channel
+[11:15:40] SMTP Server started on port 25
+[11:16:06] /[0:0:0:0:0:0:0:1]:54965 connected
+[11:16:06] /[0:0:0:0:0:0:0:1]:54965 <- 220 smtp.example.com Service Ready
+[11:16:13] /[0:0:0:0:0:0:0:1]:54965 -> helo mahmoud
+[11:16:13] /[0:0:0:0:0:0:0:1]:54965 <- 250 Hello mahmoud
+[11:16:23] /[0:0:0:0:0:0:0:1]:54965 -> MAIL FROM: <mahmoud@domain.com>
+[11:16:23] /[0:0:0:0:0:0:0:1]:54965 Connecté au service RMI
+[11:16:23] /[0:0:0:0:0:0:0:1]:54965 RMI userExists(mahmoud) -> true
+[11:16:23] /[0:0:0:0:0:0:0:1]:54965 <- 250 OK
+[11:16:32] /[0:0:0:0:0:0:0:1]:54965 -> RCPT TO: <mahmoud@domain.com>
+[11:16:32] /[0:0:0:0:0:0:0:1]:54965 <- 250 OK
+[11:16:34] /[0:0:0:0:0:0:0:1]:54965 -> data
+[11:16:34] /[0:0:0:0:0:0:0:1]:54965 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[11:16:37] /[0:0:0:0:0:0:0:1]:54965 -> chararaaaaaaaaa
+[11:16:38] /[0:0:0:0:0:0:0:1]:54965 -> .
+[11:16:39] /[0:0:0:0:0:0:0:1]:54965 Stored email for mahmoud in Database
+[11:16:39] /[0:0:0:0:0:0:0:1]:54965 <- 250 OK: Message accepted for delivery
+[11:16:41] /[0:0:0:0:0:0:0:1]:54965 -> quit
+[11:16:41] /[0:0:0:0:0:0:0:1]:54965 <- 221 smtp.example.com Service closing transmission channel
+[11:17:28] /[0:0:0:0:0:0:0:1]:54991 connected
+[11:17:28] /[0:0:0:0:0:0:0:1]:54991 <- 220 smtp.example.com Service Ready
+[11:17:35] /[0:0:0:0:0:0:0:1]:54991 -> helo mah
+[11:17:35] /[0:0:0:0:0:0:0:1]:54991 <- 250 Hello mah
+[11:18:03] /[0:0:0:0:0:0:0:1]:54991 -> MAIL FROM: <mah@domain.com>
+[11:18:03] /[0:0:0:0:0:0:0:1]:54991 Connecté au service RMI
+[11:18:03] /[0:0:0:0:0:0:0:1]:54991 RMI userExists(mah) -> true
+[11:18:03] /[0:0:0:0:0:0:0:1]:54991 <- 250 OK
+[11:18:19] /[0:0:0:0:0:0:0:1]:54991 -> RCPT TO: <mah@domain.com>
+[11:18:19] /[0:0:0:0:0:0:0:1]:54991 <- 250 OK
+[11:18:21] /[0:0:0:0:0:0:0:1]:54991 -> data
+[11:18:21] /[0:0:0:0:0:0:0:1]:54991 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[11:18:37] /[0:0:0:0:0:0:0:1]:54991 -> manai raged
+[11:18:41] /[0:0:0:0:0:0:0:1]:54991 -> mahmoud
+[11:18:42] /[0:0:0:0:0:0:0:1]:54991 -> .
+[11:18:43] /[0:0:0:0:0:0:0:1]:54991 Stored email for mah in Database
+[11:18:43] /[0:0:0:0:0:0:0:1]:54991 <- 250 OK: Message accepted for delivery
+[11:18:53] /[0:0:0:0:0:0:0:1]:54991 -> quit
+[11:18:53] /[0:0:0:0:0:0:0:1]:54991 <- 221 smtp.example.com Service closing transmission channel
+[11:22:23] /[0:0:0:0:0:0:0:1]:55059 connected
+[11:22:23] /[0:0:0:0:0:0:0:1]:55059 <- 220 smtp.example.com Service Ready
+[11:22:38] /[0:0:0:0:0:0:0:1]:55064 connected
+[11:22:38] /[0:0:0:0:0:0:0:1]:55064 <- 220 smtp.example.com Service Ready
+[11:22:44] /[0:0:0:0:0:0:0:1]:55059 -> helo mah
+[11:22:44] /[0:0:0:0:0:0:0:1]:55059 <- 250 Hello mah
+[11:23:05] /[0:0:0:0:0:0:0:1]:55059 -> MAIL FROM: <mahae@domain.com>
+[11:23:05] /[0:0:0:0:0:0:0:1]:55059 Connecté au service RMI
+[11:23:05] /[0:0:0:0:0:0:0:1]:55059 RMI userExists(mahae) -> false
+[11:23:05] /[0:0:0:0:0:0:0:1]:55059 <- 550 Sender rejected: unknown user 'mahae'
+[11:23:23] /[0:0:0:0:0:0:0:1]:55059 -> [AMAIL FROM: <mahae@domain.com>
+[11:23:23] /[0:0:0:0:0:0:0:1]:55059 <- 500 Command unrecognized
+[11:23:39] /[0:0:0:0:0:0:0:1]:55059 -> MAIL FROM: <mah@domain.com>
+[11:23:39] /[0:0:0:0:0:0:0:1]:55059 RMI userExists(mah) -> true
+[11:23:39] /[0:0:0:0:0:0:0:1]:55059 <- 250 OK
+[11:24:20] /[0:0:0:0:0:0:0:1]:55059 -> RCPT TO: <mah@domain.com>
+[11:24:20] /[0:0:0:0:0:0:0:1]:55059 <- 250 OK
+[11:24:34] /[0:0:0:0:0:0:0:1]:55059 -> RCPT TO: <manai@domain.com>
+[11:24:34] /[0:0:0:0:0:0:0:1]:55059 <- 250 OK
+[11:24:42] /[0:0:0:0:0:0:0:1]:55059 -> data
+[11:24:42] /[0:0:0:0:0:0:0:1]:55059 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[11:24:46] /[0:0:0:0:0:0:0:1]:55059 -> zefzeiuobvzobvoz
+[11:24:46] /[0:0:0:0:0:0:0:1]:55059 -> .
+[11:24:47] /[0:0:0:0:0:0:0:1]:55059 Stored email for mah in Database
+[11:24:47] /[0:0:0:0:0:0:0:1]:55059 Stored email for manai in Database
+[11:24:47] /[0:0:0:0:0:0:0:1]:55059 <- 250 OK: Message accepted for delivery
+[11:30:53] /[0:0:0:0:0:0:0:1]:55059 -> 
+[11:30:53] /[0:0:0:0:0:0:0:1]:55059 <- 500 Command unrecognized
+[11:30:54] /[0:0:0:0:0:0:0:1]:55059 -> 
+[11:30:54] /[0:0:0:0:0:0:0:1]:55059 <- 500 Command unrecognized
+[11:30:55] /[0:0:0:0:0:0:0:1]:55059 -> 
+[11:30:55] /[0:0:0:0:0:0:0:1]:55059 <- 500 Command unrecognized
+[11:30:57] /[0:0:0:0:0:0:0:1]:55059 -> quit
+[11:30:57] /[0:0:0:0:0:0:0:1]:55059 <- 221 smtp.example.com Service closing transmission channel
+[11:31:25] /[0:0:0:0:0:0:0:1]:55064 -> helo 
+[11:31:25] /[0:0:0:0:0:0:0:1]:55064 <- 250 Hello 
+[11:31:47] /[0:0:0:0:0:0:0:1]:55064 -> MAIL FROM: <mahmoud@domain.com>
+[11:31:47] /[0:0:0:0:0:0:0:1]:55064 Connecté au service RMI
+[11:31:47] /[0:0:0:0:0:0:0:1]:55064 RMI userExists(mahmoud) -> true
+[11:31:47] /[0:0:0:0:0:0:0:1]:55064 <- 250 OK
+[11:32:12] /[0:0:0:0:0:0:0:1]:55064 -> RCPT TO: <mahmoud@domain.com>
+[11:32:12] /[0:0:0:0:0:0:0:1]:55064 <- 250 OK
+[11:32:14] /[0:0:0:0:0:0:0:1]:55064 -> data
+[11:32:14] /[0:0:0:0:0:0:0:1]:55064 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[11:32:17] /[0:0:0:0:0:0:0:1]:55064 -> mahmoud
+[11:32:19] /[0:0:0:0:0:0:0:1]:55064 -> bakouche
+[11:32:21] /[0:0:0:0:0:0:0:1]:55064 -> .
+[11:32:21] /[0:0:0:0:0:0:0:1]:55064 Stored email for mahmoud in Database
+[11:32:21] /[0:0:0:0:0:0:0:1]:55064 <- 250 OK: Message accepted for delivery
+[11:32:23] /[0:0:0:0:0:0:0:1]:55064 -> quit
+[11:32:23] /[0:0:0:0:0:0:0:1]:55064 <- 221 smtp.example.com Service closing transmission channel
+[11:56:10] SMTP Server started on port 25
+[11:56:23] /[0:0:0:0:0:0:0:1]:55787 connected
+[11:56:23] /[0:0:0:0:0:0:0:1]:55787 <- 220 smtp.example.com Service Ready
+[11:58:58] SMTP Server started on port 25
+[12:01:42] SMTP Server started on port 25
+[12:11:32] SMTP Server started on port 25
+[12:25:35] SMTP Server started on port 25
+[12:32:59] /[0:0:0:0:0:0:0:1]:56824 connected
+[12:32:59] /[0:0:0:0:0:0:0:1]:56824 <- 220 smtp.example.com Service Ready
+[12:33:03] /[0:0:0:0:0:0:0:1]:56824 -> helo mahmoud
+[12:33:03] /[0:0:0:0:0:0:0:1]:56824 <- 250 Hello mahmoud
+[12:33:05] /[0:0:0:0:0:0:0:1]:56824 -> MAIL FROM:<mahmoud@example.com>
+[12:33:05] /[0:0:0:0:0:0:0:1]:56824 Connecté au service RMI
+[12:33:05] /[0:0:0:0:0:0:0:1]:56824 RMI userExists(mahmoud) -> true
+[12:33:05] /[0:0:0:0:0:0:0:1]:56824 <- 250 OK
+[12:33:26] /[0:0:0:0:0:0:0:1]:56824 -> RCPT TO:<mahmoud@example.com>
+[12:33:26] /[0:0:0:0:0:0:0:1]:56824 <- 250 OK
+[12:33:30] /[0:0:0:0:0:0:0:1]:56824 -> data 
+[12:33:30] /[0:0:0:0:0:0:0:1]:56824 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[12:33:33] /[0:0:0:0:0:0:0:1]:56824 -> hzefczevb
+[12:33:34] /[0:0:0:0:0:0:0:1]:56824 -> .
+[12:33:35] /[0:0:0:0:0:0:0:1]:56824 Stored email for <mahmoud@example.com> in Database
+[12:33:35] /[0:0:0:0:0:0:0:1]:56824 <- 250 OK: Message accepted for delivery
+[12:33:35] /[0:0:0:0:0:0:0:1]:56824 -> 
+[12:33:35] /[0:0:0:0:0:0:0:1]:56824 <- 500 Command unrecognized
+[12:33:39] /[0:0:0:0:0:0:0:1]:56824 -> quit
+[12:33:39] /[0:0:0:0:0:0:0:1]:56824 <- 221 smtp.example.com Service closing transmission channel
+[12:38:15] SMTP Server started on port 25
+[12:38:24] /[0:0:0:0:0:0:0:1]:56916 connected
+[12:38:24] /[0:0:0:0:0:0:0:1]:56916 <- 220 smtp.example.com Service Ready
+[12:38:27] /[0:0:0:0:0:0:0:1]:56916 -> helo 
+[12:38:27] /[0:0:0:0:0:0:0:1]:56916 <- 250 Hello 
+[12:38:36] /[0:0:0:0:0:0:0:1]:56916 -> MAIL FROM:<mahmoud@example.com>
+[12:38:36] /[0:0:0:0:0:0:0:1]:56916 Connecté au service RMI
+[12:38:36] /[0:0:0:0:0:0:0:1]:56916 RMI userExists(mahmoud) -> true
+[12:38:36] /[0:0:0:0:0:0:0:1]:56916 <- 250 OK
+[12:38:54] /[0:0:0:0:0:0:0:1]:56916 -> RCPT TO:<mahmoud@example.com>
+[12:38:54] /[0:0:0:0:0:0:0:1]:56916 <- 250 OK
+[12:38:56] /[0:0:0:0:0:0:0:1]:56916 -> data
+[12:38:56] /[0:0:0:0:0:0:0:1]:56916 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[12:38:58] /[0:0:0:0:0:0:0:1]:56916 -> zaecbzeobav
+[12:38:59] /[0:0:0:0:0:0:0:1]:56916 -> .
+[12:38:59] /[0:0:0:0:0:0:0:1]:56916 Stored email for mahmoud in Database
+[12:38:59] /[0:0:0:0:0:0:0:1]:56916 <- 250 OK: Message accepted for delivery
+[12:39:05] /[0:0:0:0:0:0:0:1]:56916 -> quit
+[12:39:05] /[0:0:0:0:0:0:0:1]:56916 <- 221 smtp.example.com Service closing transmission channel
+[13:27:00] SMTP Server started on port 25
+[13:29:23] /127.0.0.1:57684 connected
+[13:29:23] /127.0.0.1:57684 <- 220 smtp.example.com Service Ready
+[13:29:23] /127.0.0.1:57684 -> HELO web-client
+[13:29:23] /127.0.0.1:57684 <- 250 Hello web-client
+[13:29:23] /127.0.0.1:57684 -> MAIL FROM:<louai@example.com>
+[13:29:23] /127.0.0.1:57684 Connecté au service RMI
+[13:29:23] /127.0.0.1:57684 RMI userExists(louai) -> true
+[13:29:23] /127.0.0.1:57684 <- 250 OK
+[13:29:23] /127.0.0.1:57684 -> RCPT TO:<mahmoud@gmail.com@example.com>
+[13:29:23] /127.0.0.1:57684 <- 250 OK
+[13:29:23] /127.0.0.1:57684 -> DATA
+[13:29:23] /127.0.0.1:57684 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[13:29:23] /127.0.0.1:57684 -> Subject: test tp
+[13:29:23] /127.0.0.1:57684 -> From: louai@example.com
+[13:29:23] /127.0.0.1:57684 -> To: mahmoud@gmail.com@example.com
+[13:29:23] /127.0.0.1:57684 -> 
+[13:29:23] /127.0.0.1:57684 -> bonjoure le message ca conceren le test tp
+[13:29:23] /127.0.0.1:57684 -> .
+[13:29:28] /127.0.0.1:57684 Stored email for mahmoud in Database
+[13:29:28] /127.0.0.1:57684 <- 250 OK: Message accepted for delivery
+[13:29:28] /127.0.0.1:57684 -> QUIT
+[13:29:28] /127.0.0.1:57684 <- 221 smtp.example.com Service closing transmission channel
+[13:37:11] SMTP Server started on port 25
+[13:42:00] SMTP Server started on port 25
+[15:23:30] SMTP Server started on port 25
+[16:15:14] SMTP Server started on port 25
+[16:58:18] SMTP Server started on port 25
+[17:04:35] SMTP Server started on port 25
+[17:07:52] SMTP Server started on port 25
+[17:10:13] /127.0.0.1:57197 connected
+[17:10:13] /127.0.0.1:57197 <- 220 smtp.example.com Service Ready
+[17:10:13] /127.0.0.1:57197 -> HELO web-client
+[17:10:13] /127.0.0.1:57197 <- 250 Hello web-client
+[17:10:13] /127.0.0.1:57197 -> MAIL FROM:<mahmoud@example.com>
+[17:10:14] /127.0.0.1:57197 Connecté au service RMI
+[17:10:14] /127.0.0.1:57197 RMI userExists(mahmoud) -> true
+[17:10:14] /127.0.0.1:57197 <- 250 OK
+[17:10:14] /127.0.0.1:57197 -> RCPT TO:<louai@gmail.com manai@gmail.com@example.com>
+[17:10:14] /127.0.0.1:57197 <- 250 OK
+[17:10:14] /127.0.0.1:57197 -> DATA
+[17:10:14] /127.0.0.1:57197 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[17:10:14] /127.0.0.1:57197 -> Subject: fin partie de tp
+[17:10:14] /127.0.0.1:57197 -> From: mahmoud@example.com
+[17:10:14] /127.0.0.1:57197 -> To: louai@gmail.com manai@gmail.com@example.com
+[17:10:14] /127.0.0.1:57197 -> 
+[17:10:14] /127.0.0.1:57197 -> j'ai fini
+[17:10:14] /127.0.0.1:57197 -> .
+[17:10:15] /127.0.0.1:57197 Stored email for louai in Database
+[17:10:15] /127.0.0.1:57197 <- 250 OK: Message accepted for delivery
+[17:10:15] /127.0.0.1:57197 -> QUIT
+[17:10:15] /127.0.0.1:57197 <- 221 smtp.example.com Service closing transmission channel
+[17:12:04] /127.0.0.1:57276 connected
+[17:12:04] /127.0.0.1:57276 <- 220 smtp.example.com Service Ready
+[17:12:04] /127.0.0.1:57276 -> HELO web-client
+[17:12:04] /127.0.0.1:57276 <- 250 Hello web-client
+[17:12:04] /127.0.0.1:57276 -> MAIL FROM:<mahmoud@example.com>
+[17:12:04] /127.0.0.1:57276 Connecté au service RMI
+[17:12:04] /127.0.0.1:57276 RMI userExists(mahmoud) -> true
+[17:12:04] /127.0.0.1:57276 <- 250 OK
+[17:12:04] /127.0.0.1:57276 -> RCPT TO:<louai@gmail.com@example.com>
+[17:12:04] /127.0.0.1:57276 <- 250 OK
+[17:12:04] /127.0.0.1:57276 -> DATA
+[17:12:04] /127.0.0.1:57276 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[17:12:04] /127.0.0.1:57276 -> Subject: sfbzes
+[17:12:04] /127.0.0.1:57276 -> From: mahmoud@example.com
+[17:12:04] /127.0.0.1:57276 -> To: louai@gmail.com@example.com
+[17:12:04] /127.0.0.1:57276 -> 
+[17:12:04] /127.0.0.1:57276 -> erourhbvevbnz
+[17:12:04] /127.0.0.1:57276 -> .
+[17:12:05] /127.0.0.1:57276 Stored email for louai in Database
+[17:12:05] /127.0.0.1:57276 <- 250 OK: Message accepted for delivery
+[17:12:05] /127.0.0.1:57276 -> QUIT
+[17:12:05] /127.0.0.1:57276 <- 221 smtp.example.com Service closing transmission channel
+[19:20:15] SMTP Server started on port 25
+[19:44:33] SMTP Server started on port 25
+[02:23:34] SMTP Server started on port 25
+[02:25:17] /127.0.0.1:61690 connected
+[02:25:17] /127.0.0.1:61690 <- 220 smtp.example.com Service Ready
+[02:25:17] /127.0.0.1:61690 -> HELO web-client
+[02:25:17] /127.0.0.1:61690 <- 250 Hello web-client
+[02:25:17] /127.0.0.1:61690 -> MAIL FROM:<mahmoud@example.com>
+[02:25:17] /127.0.0.1:61690 Connecté au service RMI
+[02:25:17] /127.0.0.1:61690 RMI userExists(mahmoud) -> true
+[02:25:17] /127.0.0.1:61690 <- 250 OK
+[02:25:17] /127.0.0.1:61690 -> RCPT TO:<charara@gmail.com@example.com>
+[02:25:17] /127.0.0.1:61690 <- 250 OK
+[02:25:17] /127.0.0.1:61690 -> DATA
+[02:25:17] /127.0.0.1:61690 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[02:25:17] /127.0.0.1:61690 -> Subject: permision
+[02:25:17] /127.0.0.1:61690 -> From: mahmoud@example.com
+[02:25:17] /127.0.0.1:61690 -> To: charara@gmail.com@example.com
+[02:25:17] /127.0.0.1:61690 -> 
+[02:25:17] /127.0.0.1:61690 -> le 17 mai c'es la permision
+[02:25:17] /127.0.0.1:61690 -> .
+[02:25:19] /127.0.0.1:61690 Stored email for charara in Database
+[02:25:19] /127.0.0.1:61690 <- 250 OK: Message accepted for delivery
+[02:25:19] /127.0.0.1:61690 -> QUIT
+[02:25:19] /127.0.0.1:61690 <- 221 smtp.example.com Service closing transmission channel
+[02:26:24] /127.0.0.1:62223 connected
+[02:26:24] /127.0.0.1:62223 <- 220 smtp.example.com Service Ready
+[02:26:24] /127.0.0.1:62223 -> HELO web-client
+[02:26:24] /127.0.0.1:62223 <- 250 Hello web-client
+[02:26:24] /127.0.0.1:62223 -> MAIL FROM:<charara@example.com>
+[02:26:24] /127.0.0.1:62223 Connecté au service RMI
+[02:26:24] /127.0.0.1:62223 RMI userExists(charara) -> true
+[02:26:24] /127.0.0.1:62223 <- 250 OK
+[02:26:24] /127.0.0.1:62223 -> RCPT TO:<mahmoud@gmail.com@example.com>
+[02:26:24] /127.0.0.1:62223 <- 250 OK
+[02:26:24] /127.0.0.1:62223 -> DATA
+[02:26:24] /127.0.0.1:62223 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[02:26:24] /127.0.0.1:62223 -> Subject: permision
+[02:26:24] /127.0.0.1:62223 -> From: charara@example.com
+[02:26:24] /127.0.0.1:62223 -> To: mahmoud@gmail.com@example.com
+[02:26:24] /127.0.0.1:62223 -> 
+[02:26:24] /127.0.0.1:62223 -> merci pour vote information
+[02:26:24] /127.0.0.1:62223 -> .
+[02:26:24] /127.0.0.1:62223 Stored email for mahmoud in Database
+[02:26:24] /127.0.0.1:62223 <- 250 OK: Message accepted for delivery
+[02:26:24] /127.0.0.1:62223 -> QUIT
+[02:26:24] /127.0.0.1:62223 <- 221 smtp.example.com Service closing transmission channel
+[02:27:16] /127.0.0.1:62546 connected
+[02:27:16] /127.0.0.1:62546 <- 220 smtp.example.com Service Ready
+[02:27:16] /127.0.0.1:62546 -> HELO web-client
+[02:27:16] /127.0.0.1:62546 <- 250 Hello web-client
+[02:27:16] /127.0.0.1:62546 -> MAIL FROM:<mahmoud@example.com>
+[02:27:16] /127.0.0.1:62546 Connecté au service RMI
+[02:27:17] /127.0.0.1:62546 RMI userExists(mahmoud) -> true
+[02:27:17] /127.0.0.1:62546 <- 250 OK
+[02:27:17] /127.0.0.1:62546 -> RCPT TO:<charara@gmail.com@example.com>
+[02:27:17] /127.0.0.1:62546 <- 250 OK
+[02:27:17] /127.0.0.1:62546 -> DATA
+[02:27:17] /127.0.0.1:62546 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[02:27:17] /127.0.0.1:62546 -> Subject: test tp
+[02:27:17] /127.0.0.1:62546 -> From: mahmoud@example.com
+[02:27:17] /127.0.0.1:62546 -> To: charara@gmail.com@example.com
+[02:27:17] /127.0.0.1:62546 -> 
+[02:27:17] /127.0.0.1:62546 -> le test tp est le dimanche
+[02:27:17] /127.0.0.1:62546 -> .
+[02:27:17] /127.0.0.1:62546 Stored email for charara in Database
+[02:27:17] /127.0.0.1:62546 <- 250 OK: Message accepted for delivery
+[02:27:17] /127.0.0.1:62546 -> QUIT
+[02:27:17] /127.0.0.1:62546 <- 221 smtp.example.com Service closing transmission channel
+[10:30:32] SMTP Server started on port 25
+[10:30:44] /127.0.0.1:59594 connected
+[10:30:44] /127.0.0.1:59594 <- 220 smtp.example.com Service Ready
+[10:30:44] /127.0.0.1:59594 -> HELO web-client
+[10:30:44] /127.0.0.1:59594 <- 250 Hello web-client
+[10:30:44] /127.0.0.1:59594 -> MAIL FROM:<charara@example.com>
+[10:30:45] /127.0.0.1:59594 Connecté au service RMI
+[10:30:45] /127.0.0.1:59594 RMI userExists(charara) -> true
+[10:30:45] /127.0.0.1:59594 <- 250 OK
+[10:30:45] /127.0.0.1:59594 -> RCPT TO:<mahmoud@gmail.com@example.com>
+[10:30:45] /127.0.0.1:59594 <- 250 OK
+[10:30:45] /127.0.0.1:59594 -> DATA
+[10:30:45] /127.0.0.1:59594 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[10:30:45] /127.0.0.1:59594 -> Subject: test tp
+[10:30:45] /127.0.0.1:59594 -> From: charara@example.com
+[10:30:45] /127.0.0.1:59594 -> To: mahmoud@gmail.com@example.com
+[10:30:45] /127.0.0.1:59594 -> 
+[10:30:45] /127.0.0.1:59594 -> le test tp est demain
+[10:30:45] /127.0.0.1:59594 -> .
+[10:30:46] /127.0.0.1:59594 Stored email for mahmoud in Database
+[10:30:46] /127.0.0.1:59594 <- 250 OK: Message accepted for delivery
+[10:30:46] /127.0.0.1:59594 -> QUIT
+[10:30:46] /127.0.0.1:59594 <- 221 smtp.example.com Service closing transmission channel
+[10:32:18] /127.0.0.1:54460 connected
+[10:32:18] /127.0.0.1:54460 <- 220 smtp.example.com Service Ready
+[10:32:18] /127.0.0.1:54460 -> HELO web-client
+[10:32:18] /127.0.0.1:54460 <- 250 Hello web-client
+[10:32:18] /127.0.0.1:54460 -> MAIL FROM:<charara@example.com>
+[10:32:18] /127.0.0.1:54460 Connecté au service RMI
+[10:32:18] /127.0.0.1:54460 RMI userExists(charara) -> true
+[10:32:18] /127.0.0.1:54460 <- 250 OK
+[10:32:18] /127.0.0.1:54460 -> RCPT TO:<mahmoud@gmail.com@example.com>
+[10:32:18] /127.0.0.1:54460 <- 250 OK
+[10:32:18] /127.0.0.1:54460 -> DATA
+[10:32:18] /127.0.0.1:54460 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[10:32:18] /127.0.0.1:54460 -> Subject: test tp
+[10:32:18] /127.0.0.1:54460 -> From: charara@example.com
+[10:32:18] /127.0.0.1:54460 -> To: mahmoud@gmail.com@example.com
+[10:32:18] /127.0.0.1:54460 -> 
+[10:32:18] /127.0.0.1:54460 -> je suis pret
+[10:32:18] /127.0.0.1:54460 -> .
+[10:32:18] /127.0.0.1:54460 Stored email for mahmoud in Database
+[10:32:18] /127.0.0.1:54460 <- 250 OK: Message accepted for delivery
+[10:32:18] /127.0.0.1:54460 -> QUIT
+[10:32:18] /127.0.0.1:54460 <- 221 smtp.example.com Service closing transmission channel
+[15:21:30] SMTP Server started on port 25
+[09:48:45] SMTP Server started on port 25
+[13:18:37] SMTP Server started on port 25
+[13:19:19] /127.0.0.1:53524 connected
+[13:19:19] /127.0.0.1:53524 <- 220 smtp.example.com Service Ready
+[13:19:19] /127.0.0.1:53524 -> HELO web-client
+[13:19:19] /127.0.0.1:53524 <- 250 Hello web-client
+[13:19:19] /127.0.0.1:53524 -> MAIL FROM:<mahmoud@example.com>
+[13:19:20] /127.0.0.1:53524 Connecté au service RMI
+[13:19:20] /127.0.0.1:53524 RMI userExists(mahmoud) -> true
+[13:19:20] /127.0.0.1:53524 <- 250 OK
+[13:19:20] /127.0.0.1:53524 -> RCPT TO:<mahmoud@gmail.com@example.com>
+[13:19:20] /127.0.0.1:53524 <- 250 OK
+[13:19:20] /127.0.0.1:53524 -> DATA
+[13:19:20] /127.0.0.1:53524 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[13:19:20] /127.0.0.1:53524 -> Subject: test
+[13:19:20] /127.0.0.1:53524 -> From: mahmoud@example.com
+[13:19:20] /127.0.0.1:53524 -> To: mahmoud@gmail.com@example.com
+[13:19:20] /127.0.0.1:53524 -> 
+[13:19:20] /127.0.0.1:53524 -> test
+[13:19:20] /127.0.0.1:53524 -> .
+[13:19:22] /127.0.0.1:53524 Stored email for mahmoud in Database
+[13:19:22] /127.0.0.1:53524 <- 250 OK: Message accepted for delivery
+[13:19:22] /127.0.0.1:53524 -> QUIT
+[13:19:22] /127.0.0.1:53524 <- 221 smtp.example.com Service closing transmission channel
+[13:22:11] /127.0.0.1:56017 connected
+[13:22:11] /127.0.0.1:56017 <- 220 smtp.example.com Service Ready
+[13:22:11] /127.0.0.1:56017 -> HELO web-client
+[13:22:11] /127.0.0.1:56017 <- 250 Hello web-client
+[13:22:11] /127.0.0.1:56017 -> MAIL FROM:<mahmoud@example.com>
+[13:22:11] /127.0.0.1:56017 Connecté au service RMI
+[13:22:11] /127.0.0.1:56017 RMI userExists(mahmoud) -> true
+[13:22:11] /127.0.0.1:56017 <- 250 OK
+[13:22:11] /127.0.0.1:56017 -> RCPT TO:<charara@gmail.com@example.com>
+[13:22:11] /127.0.0.1:56017 <- 250 OK
+[13:22:11] /127.0.0.1:56017 -> DATA
+[13:22:11] /127.0.0.1:56017 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[13:22:11] /127.0.0.1:56017 -> Subject: tetetetee
+[13:22:11] /127.0.0.1:56017 -> From: mahmoud@example.com
+[13:22:11] /127.0.0.1:56017 -> To: charara@gmail.com@example.com
+[13:22:11] /127.0.0.1:56017 -> 
+[13:22:11] /127.0.0.1:56017 -> zefgifbzebcezv
+[13:22:11] /127.0.0.1:56017 -> .
+[13:22:11] /127.0.0.1:56017 Stored email for charara in Database
+[13:22:11] /127.0.0.1:56017 <- 250 OK: Message accepted for delivery
+[13:22:11] /127.0.0.1:56017 -> QUIT
+[13:22:11] /127.0.0.1:56017 <- 221 smtp.example.com Service closing transmission channel
+[13:29:50] /127.0.0.1:53921 connected
+[13:29:50] /127.0.0.1:53921 <- 220 smtp.example.com Service Ready
+[13:29:50] /127.0.0.1:53921 -> EHLO DESKTOP-TTJG3HH.mshome.net
+[13:29:50] /127.0.0.1:53921 <- 250 Hello DESKTOP-TTJG3HH.mshome.net
+[13:29:50] /127.0.0.1:53921 -> MAIL FROM:<mahmoud@example.com>
+[13:29:50] /127.0.0.1:53921 Connecté au service RMI
+[13:29:50] /127.0.0.1:53921 RMI userExists(mahmoud) -> true
+[13:29:50] /127.0.0.1:53921 <- 250 OK
+[13:29:50] /127.0.0.1:53921 -> RCPT TO:<charara@gmail.com>
+[13:29:50] /127.0.0.1:53921 <- 250 OK
+[13:29:50] /127.0.0.1:53921 -> DATA
+[13:29:50] /127.0.0.1:53921 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[13:29:50] /127.0.0.1:53921 -> Date: Sun, 19 Apr 2026 13:29:50 +0100 (CET)
+[13:29:50] /127.0.0.1:53921 -> From: mahmoud@example.com
+[13:29:50] /127.0.0.1:53921 -> To: charara@gmail.com
+[13:29:50] /127.0.0.1:53921 -> Message-ID: <1286783232.0.1776601790120@DESKTOP-TTJG3HH.mshome.net>
+[13:29:50] /127.0.0.1:53921 -> Subject: test
+[13:29:50] /127.0.0.1:53921 -> MIME-Version: 1.0
+[13:29:50] /127.0.0.1:53921 -> Content-Type: text/plain; charset=us-ascii
+[13:29:50] /127.0.0.1:53921 -> Content-Transfer-Encoding: 7bit
+[13:29:50] /127.0.0.1:53921 -> 
+[13:29:50] /127.0.0.1:53921 -> testttttt
+[13:29:50] /127.0.0.1:53921 -> .
+[13:29:50] /127.0.0.1:53921 Stored email for charara in Database
+[13:29:50] /127.0.0.1:53921 <- 250 OK: Message accepted for delivery
+[13:29:50] /127.0.0.1:53921 -> QUIT
+[13:29:50] /127.0.0.1:53921 <- 221 smtp.example.com Service closing transmission channel
+[13:52:52] SMTP Server started on port 25
+[14:01:52] SMTP Server started on port 25
+[14:06:37] SMTP Server started on port 25
+[14:07:02] /127.0.0.1:65421 connected
+[14:07:02] /127.0.0.1:65421 <- 220 smtp.example.com Service Ready
+[14:07:02] /127.0.0.1:65421 -> EHLO DESKTOP-TTJG3HH.mshome.net
+[14:07:02] /127.0.0.1:65421 <- 250 Hello DESKTOP-TTJG3HH.mshome.net
+[14:07:02] /127.0.0.1:65421 -> MAIL FROM:<mahmoud@example.com>
+[14:07:02] /127.0.0.1:65421 Connecté au service RMI
+[14:07:05] /127.0.0.1:65421 RMI userExists(mahmoud) -> true
+[14:07:05] /127.0.0.1:65421 <- 250 OK
+[14:07:05] /127.0.0.1:65421 -> RCPT TO:<mahmoud@example.com>
+[14:07:05] /127.0.0.1:65421 <- 250 OK
+[14:07:05] /127.0.0.1:65421 -> DATA
+[14:07:05] /127.0.0.1:65421 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[14:07:05] /127.0.0.1:65421 -> Date: Sun, 19 Apr 2026 14:07:01 +0100 (CET)
+[14:07:05] /127.0.0.1:65421 -> From: mahmoud@example.com
+[14:07:05] /127.0.0.1:65421 -> To: mahmoud@example.com
+[14:07:05] /127.0.0.1:65421 -> Message-ID: <510113906.0.1776604021974@DESKTOP-TTJG3HH.mshome.net>
+[14:07:05] /127.0.0.1:65421 -> Subject: ztvduavd
+[14:07:05] /127.0.0.1:65421 -> MIME-Version: 1.0
+[14:07:05] /127.0.0.1:65421 -> Content-Type: text/plain; charset=UTF-8
+[14:07:05] /127.0.0.1:65421 -> Content-Transfer-Encoding: 7bit
+[14:07:05] /127.0.0.1:65421 -> 
+[14:07:05] /127.0.0.1:65421 -> ziyvczavic
+[14:07:05] /127.0.0.1:65421 -> .
+[14:07:06] /127.0.0.1:65421 Stored email for mahmoud in Database
+[14:07:06] /127.0.0.1:65421 <- 250 OK: Message accepted for delivery
+[14:07:06] /127.0.0.1:65421 -> QUIT
+[14:07:06] /127.0.0.1:65421 <- 221 smtp.example.com Service closing transmission channel
+[14:15:31] SMTP Server started on port 25
+[14:16:07] /127.0.0.1:55492 connected
+[14:16:07] /127.0.0.1:55492 <- 220 smtp.example.com Service Ready
+[14:16:07] /127.0.0.1:55492 -> EHLO DESKTOP-TTJG3HH.mshome.net
+[14:16:07] /127.0.0.1:55492 <- 250 Hello DESKTOP-TTJG3HH.mshome.net
+[14:16:07] /127.0.0.1:55492 -> MAIL FROM:<mahmoud@example.com>
+[14:16:08] /127.0.0.1:55492 Connecté au service RMI
+[14:16:11] /127.0.0.1:55492 RMI userExists(mahmoud) -> true
+[14:16:11] /127.0.0.1:55492 <- 250 OK
+[14:16:11] /127.0.0.1:55492 -> RCPT TO:<mahmoud@example.com>
+[14:16:11] /127.0.0.1:55492 <- 250 OK
+[14:16:11] /127.0.0.1:55492 -> DATA
+[14:16:11] /127.0.0.1:55492 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[14:16:11] /127.0.0.1:55492 -> Date: Sun, 19 Apr 2026 14:16:07 +0100 (CET)
+[14:16:11] /127.0.0.1:55492 -> From: mahmoud@example.com
+[14:16:11] /127.0.0.1:55492 -> To: mahmoud@example.com
+[14:16:11] /127.0.0.1:55492 -> Message-ID: <510113906.0.1776604567526@DESKTOP-TTJG3HH.mshome.net>
+[14:16:11] /127.0.0.1:55492 -> Subject: czcf
+[14:16:11] /127.0.0.1:55492 -> MIME-Version: 1.0
+[14:16:11] /127.0.0.1:55492 -> Content-Type: text/plain; charset=UTF-8
+[14:16:11] /127.0.0.1:55492 -> Content-Transfer-Encoding: 7bit
+[14:16:11] /127.0.0.1:55492 -> 
+[14:16:11] /127.0.0.1:55492 -> aevzdvzev
+[14:16:11] /127.0.0.1:55492 -> .
+[14:16:12] /127.0.0.1:55492 Stored email for mahmoud in Database
+[14:16:12] /127.0.0.1:55492 <- 250 OK: Message accepted for delivery
+[14:16:12] /127.0.0.1:55492 -> QUIT
+[14:16:12] /127.0.0.1:55492 <- 221 smtp.example.com Service closing transmission channel
+[19:50:55] SMTP Server started on port 25
+[20:23:36] SMTP Server started on port 25
+[20:27:44] SMTP Server started on port 25
+[20:32:57] SMTP Server started on port 25
+[20:40:07] SMTP Server started on port 25
+[20:46:49] SMTP Server started on port 25
+[21:23:40] SMTP Server started on port 25
+[21:32:35] SMTP Server started on port 25
+[21:36:35] SMTP Server started on port 25
+[21:41:43] SMTP Server started on port 25
+[21:50:50] SMTP Server started on port 25
+[21:51:49] /127.0.0.1:60360 connected
+[21:51:49] /127.0.0.1:60360 <- 220 smtp.example.com Service Ready
+[21:51:49] /127.0.0.1:60360 -> EHLO DESKTOP-TTJG3HH.mshome.net
+[21:51:49] /127.0.0.1:60360 <- 250 Hello DESKTOP-TTJG3HH.mshome.net
+[21:51:49] /127.0.0.1:60360 -> MAIL FROM:<mahmoud@example.com>
+[21:51:50] /127.0.0.1:60360 Connecté au service RMI
+[21:51:52] /127.0.0.1:60360 RMI userExists(mahmoud) -> true
+[21:51:52] /127.0.0.1:60360 <- 250 OK
+[21:51:52] /127.0.0.1:60360 -> RCPT TO:<charara@gmail.com>
+[21:51:52] /127.0.0.1:60360 <- 250 OK
+[21:51:52] /127.0.0.1:60360 -> DATA
+[21:51:52] /127.0.0.1:60360 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[21:51:52] /127.0.0.1:60360 -> Date: Sun, 19 Apr 2026 21:51:49 +0100 (CET)
+[21:51:52] /127.0.0.1:60360 -> From: mahmoud@example.com
+[21:51:52] /127.0.0.1:60360 -> To: charara@gmail.com
+[21:51:52] /127.0.0.1:60360 -> Message-ID: <1547601818.0.1776631909535@DESKTOP-TTJG3HH.mshome.net>
+[21:51:52] /127.0.0.1:60360 -> Subject: macoaibvizbav
+[21:51:52] /127.0.0.1:60360 -> MIME-Version: 1.0
+[21:51:52] /127.0.0.1:60360 -> Content-Type: text/plain; charset=UTF-8
+[21:51:52] /127.0.0.1:60360 -> Content-Transfer-Encoding: 7bit
+[21:51:52] /127.0.0.1:60360 -> 
+[21:51:52] /127.0.0.1:60360 -> cuzdbcvoalvaobv
+[21:51:52] /127.0.0.1:60360 -> .
+[21:51:54] /127.0.0.1:60360 Stored email for charara in Database
+[21:51:54] /127.0.0.1:60360 <- 250 OK: Message accepted for delivery
+[21:51:54] /127.0.0.1:60360 -> QUIT
+[21:51:54] /127.0.0.1:60360 <- 221 smtp.example.com Service closing transmission channel
+[22:06:13] SMTP Server started on port 25
+[23:14:46] SMTP Server started on port 2527
+[23:14:48] SMTP Server started on port 2526
+[23:14:49] /127.0.0.1:53483 connected
+[23:14:50] /127.0.0.1:53483 <- 220 smtp.example.com Service Ready
+[23:14:50] /127.0.0.1:53484 connected
+[23:14:50] /127.0.0.1:53484 <- 220 smtp.example.com Service Ready
+[23:14:55] /127.0.0.1:50513 connected
+[23:14:55] /127.0.0.1:50514 connected
+[23:14:55] /127.0.0.1:50513 <- 220 smtp.example.com Service Ready
+[23:14:55] /127.0.0.1:50514 <- 220 smtp.example.com Service Ready
+[23:14:55] /127.0.0.1:50513 disconnected
+[23:14:55] /127.0.0.1:50514 disconnected
+[23:15:00] /127.0.0.1:50519 connected
+[23:15:00] /127.0.0.1:50520 connected
+[23:15:00] /127.0.0.1:50519 <- 220 smtp.example.com Service Ready
+[23:15:00] /127.0.0.1:50520 <- 220 smtp.example.com Service Ready
+[23:15:00] /127.0.0.1:50519 disconnected
+[23:15:00] /127.0.0.1:50520 disconnected
+[23:15:05] /127.0.0.1:50525 connected
+[23:15:05] /127.0.0.1:50526 connected
+[23:15:05] /127.0.0.1:50526 <- 220 smtp.example.com Service Ready
+[23:15:05] /127.0.0.1:50525 <- 220 smtp.example.com Service Ready
+[23:15:05] /127.0.0.1:50526 disconnected
+[23:15:05] /127.0.0.1:50525 disconnected
+[23:15:10] /127.0.0.1:50537 connected
+[23:15:10] /127.0.0.1:50538 connected
+[23:15:10] /127.0.0.1:50537 <- 220 smtp.example.com Service Ready
+[23:15:10] /127.0.0.1:50537 disconnected
+[23:15:10] /127.0.0.1:50538 <- 220 smtp.example.com Service Ready
+[23:15:10] /127.0.0.1:50538 disconnected
+[23:15:15] /127.0.0.1:57591 connected
+[23:15:15] /127.0.0.1:57592 connected
+[23:15:15] /127.0.0.1:57591 <- 220 smtp.example.com Service Ready
+[23:15:15] /127.0.0.1:57591 disconnected
+[23:15:15] /127.0.0.1:57592 <- 220 smtp.example.com Service Ready
+[23:15:15] /127.0.0.1:57592 disconnected
+[23:15:20] /127.0.0.1:57598 connected
+[23:15:20] /127.0.0.1:57599 connected
+[23:15:20] /127.0.0.1:57598 <- 220 smtp.example.com Service Ready
+[23:15:20] /127.0.0.1:57598 disconnected
+[23:15:20] /127.0.0.1:57599 <- 220 smtp.example.com Service Ready
+[23:15:20] /127.0.0.1:57599 disconnected
+[23:15:25] /127.0.0.1:57606 connected
+[23:15:25] /127.0.0.1:57607 connected
+[23:15:25] /127.0.0.1:57606 <- 220 smtp.example.com Service Ready
+[23:15:25] /127.0.0.1:57607 <- 220 smtp.example.com Service Ready
+[23:15:25] /127.0.0.1:57607 disconnected
+[23:15:25] /127.0.0.1:57606 disconnected
+[23:15:30] /127.0.0.1:60975 connected
+[23:15:30] /127.0.0.1:60976 connected
+[23:15:30] /127.0.0.1:60976 <- 220 smtp.example.com Service Ready
+[23:15:30] /127.0.0.1:60975 <- 220 smtp.example.com Service Ready
+[23:15:30] /127.0.0.1:60976 disconnected
+[23:15:30] /127.0.0.1:60975 disconnected
+[23:15:35] /127.0.0.1:60983 connected
+[23:15:35] /127.0.0.1:60984 connected
+[23:15:35] /127.0.0.1:60983 <- 220 smtp.example.com Service Ready
+[23:15:35] /127.0.0.1:60984 <- 220 smtp.example.com Service Ready
+[23:15:35] /127.0.0.1:60983 disconnected
+[23:15:35] /127.0.0.1:60984 disconnected
+[23:15:40] /127.0.0.1:60989 connected
+[23:15:40] /127.0.0.1:60990 connected
+[23:15:40] /127.0.0.1:60989 <- 220 smtp.example.com Service Ready
+[23:15:40] /127.0.0.1:60990 <- 220 smtp.example.com Service Ready
+[23:15:40] /127.0.0.1:60989 disconnected
+[23:15:40] /127.0.0.1:60990 disconnected
+[23:15:45] /127.0.0.1:60995 connected
+[23:15:45] /127.0.0.1:60996 connected
+[23:15:45] /127.0.0.1:60995 <- 220 smtp.example.com Service Ready
+[23:15:45] /127.0.0.1:60996 <- 220 smtp.example.com Service Ready
+[23:15:45] /127.0.0.1:60995 disconnected
+[23:15:45] /127.0.0.1:60996 disconnected
+[23:15:50] /127.0.0.1:57433 connected
+[23:15:50] /127.0.0.1:57434 connected
+[23:15:50] /127.0.0.1:57433 <- 220 smtp.example.com Service Ready
+[23:15:50] /127.0.0.1:57434 <- 220 smtp.example.com Service Ready
+[23:15:50] /127.0.0.1:57433 disconnected
+[23:15:50] /127.0.0.1:57434 disconnected
+[23:15:55] /127.0.0.1:54444 connected
+[23:15:55] /127.0.0.1:54445 connected
+[23:15:55] /127.0.0.1:54444 <- 220 smtp.example.com Service Ready
+[23:15:55] /127.0.0.1:54444 disconnected
+[23:15:55] /127.0.0.1:54445 <- 220 smtp.example.com Service Ready
+[23:15:55] /127.0.0.1:54445 disconnected
+[23:16:00] /127.0.0.1:54452 connected
+[23:16:00] /127.0.0.1:54453 connected
+[23:16:00] /127.0.0.1:54452 <- 220 smtp.example.com Service Ready
+[23:16:00] /127.0.0.1:54453 <- 220 smtp.example.com Service Ready
+[23:16:00] /127.0.0.1:54452 disconnected
+[23:16:00] /127.0.0.1:54453 disconnected
+[23:16:05] /127.0.0.1:54462 connected
+[23:16:05] /127.0.0.1:54463 connected
+[23:16:05] /127.0.0.1:54462 <- 220 smtp.example.com Service Ready
+[23:16:05] /127.0.0.1:54463 <- 220 smtp.example.com Service Ready
+[23:16:05] /127.0.0.1:54462 disconnected
+[23:16:05] /127.0.0.1:54463 disconnected
+[23:16:10] /127.0.0.1:54472 connected
+[23:16:10] /127.0.0.1:54473 connected
+[23:16:10] /127.0.0.1:54472 <- 220 smtp.example.com Service Ready
+[23:16:10] /127.0.0.1:54473 <- 220 smtp.example.com Service Ready
+[23:16:10] /127.0.0.1:54472 disconnected
+[23:16:10] /127.0.0.1:54473 disconnected
+[23:16:15] /127.0.0.1:54481 connected
+[23:16:15] /127.0.0.1:54482 connected
+[23:16:15] /127.0.0.1:54481 <- 220 smtp.example.com Service Ready
+[23:16:15] /127.0.0.1:54482 <- 220 smtp.example.com Service Ready
+[23:16:15] /127.0.0.1:54482 disconnected
+[23:16:15] /127.0.0.1:54481 disconnected
+[23:16:20] /127.0.0.1:54488 connected
+[23:16:20] /127.0.0.1:54489 connected
+[23:16:20] /127.0.0.1:54488 <- 220 smtp.example.com Service Ready
+[23:16:20] /127.0.0.1:54489 <- 220 smtp.example.com Service Ready
+[23:16:20] /127.0.0.1:54488 disconnected
+[23:16:20] /127.0.0.1:54489 disconnected
+[23:16:25] /127.0.0.1:54496 connected
+[23:16:25] /127.0.0.1:54497 connected
+[23:16:25] /127.0.0.1:54497 <- 220 smtp.example.com Service Ready
+[23:16:25] /127.0.0.1:54496 <- 220 smtp.example.com Service Ready
+[23:16:25] /127.0.0.1:54496 disconnected
+[23:16:25] /127.0.0.1:54497 disconnected
+[23:17:25] SMTP Server started on port 2527
+[23:17:27] SMTP Server started on port 2526
+[23:17:30] /127.0.0.1:61560 connected
+[23:17:30] /127.0.0.1:61561 connected
+[23:17:30] /127.0.0.1:61560 <- 220 smtp.example.com Service Ready
+[23:17:30] /127.0.0.1:61561 <- 220 smtp.example.com Service Ready
+[23:17:30] /127.0.0.1:61560 disconnected
+[23:17:30] /127.0.0.1:61561 disconnected
+[23:17:35] /127.0.0.1:61567 connected
+[23:17:35] /127.0.0.1:61568 connected
+[23:17:35] /127.0.0.1:61567 <- 220 smtp.example.com Service Ready
+[23:17:35] /127.0.0.1:61568 <- 220 smtp.example.com Service Ready
+[23:17:35] /127.0.0.1:61567 disconnected
+[23:17:35] /127.0.0.1:61568 disconnected
+[23:17:40] /127.0.0.1:61576 connected
+[23:17:40] /127.0.0.1:61577 connected
+[23:17:40] /127.0.0.1:61576 <- 220 smtp.example.com Service Ready
+[23:17:40] /127.0.0.1:61577 <- 220 smtp.example.com Service Ready
+[23:17:40] /127.0.0.1:61576 disconnected
+[23:17:40] /127.0.0.1:61577 disconnected
+[23:17:45] /127.0.0.1:61582 connected
+[23:17:45] /127.0.0.1:61583 connected
+[23:17:45] /127.0.0.1:61582 <- 220 smtp.example.com Service Ready
+[23:17:45] /127.0.0.1:61583 <- 220 smtp.example.com Service Ready
+[23:17:45] /127.0.0.1:61583 disconnected
+[23:17:45] /127.0.0.1:61582 disconnected
+[23:17:50] /127.0.0.1:61591 connected
+[23:17:50] /127.0.0.1:61592 connected
+[23:17:50] /127.0.0.1:61592 <- 220 smtp.example.com Service Ready
+[23:17:50] /127.0.0.1:61592 disconnected
+[23:17:50] /127.0.0.1:61591 <- 220 smtp.example.com Service Ready
+[23:17:50] /127.0.0.1:61591 disconnected
+[23:17:55] /127.0.0.1:61599 connected
+[23:17:55] /127.0.0.1:61600 connected
+[23:17:55] /127.0.0.1:61599 <- 220 smtp.example.com Service Ready
+[23:17:55] /127.0.0.1:61599 disconnected
+[23:17:55] /127.0.0.1:61600 <- 220 smtp.example.com Service Ready
+[23:17:55] /127.0.0.1:61600 disconnected
+[23:18:00] /127.0.0.1:61607 connected
+[23:18:00] /127.0.0.1:61608 connected
+[23:18:00] /127.0.0.1:61608 <- 220 smtp.example.com Service Ready
+[23:18:00] /127.0.0.1:61607 <- 220 smtp.example.com Service Ready
+[23:18:00] /127.0.0.1:61607 disconnected
+[23:18:05] /127.0.0.1:61613 connected
+[23:18:05] /127.0.0.1:61613 <- 220 smtp.example.com Service Ready
+[23:18:05] /127.0.0.1:61613 disconnected
+[23:18:05] /127.0.0.1:61614 connected
+[23:18:05] /127.0.0.1:61614 <- 220 smtp.example.com Service Ready
+[23:18:05] /127.0.0.1:61614 disconnected
+[23:18:10] /127.0.0.1:61619 connected
+[23:18:10] /127.0.0.1:61620 connected
+[23:18:10] /127.0.0.1:61619 <- 220 smtp.example.com Service Ready
+[23:18:10] /127.0.0.1:61620 <- 220 smtp.example.com Service Ready
+[23:18:10] /127.0.0.1:61619 disconnected
+[23:18:10] /127.0.0.1:61620 disconnected
+[23:18:15] /127.0.0.1:57216 connected
+[23:18:15] /127.0.0.1:57217 connected
+[23:18:15] /127.0.0.1:57216 <- 220 smtp.example.com Service Ready
+[23:18:15] /127.0.0.1:57217 <- 220 smtp.example.com Service Ready
+[23:18:15] /127.0.0.1:57216 disconnected
+[23:18:15] /127.0.0.1:57217 disconnected
+[23:18:20] /127.0.0.1:57227 connected
+[23:18:20] /127.0.0.1:57228 connected
+[23:18:20] /127.0.0.1:57227 <- 220 smtp.example.com Service Ready
+[23:18:20] /127.0.0.1:57227 disconnected
+[23:18:20] /127.0.0.1:57228 <- 220 smtp.example.com Service Ready
+[23:18:20] /127.0.0.1:57228 disconnected
+[23:18:25] /127.0.0.1:57237 connected
+[23:18:25] /127.0.0.1:57238 connected
+[23:18:25] /127.0.0.1:57237 <- 220 smtp.example.com Service Ready
+[23:18:25] /127.0.0.1:57238 <- 220 smtp.example.com Service Ready
+[23:18:25] /127.0.0.1:57237 disconnected
+[23:18:25] /127.0.0.1:57238 disconnected
+[23:18:30] /127.0.0.1:60555 connected
+[23:18:30] /127.0.0.1:60556 connected
+[23:18:30] /127.0.0.1:60555 <- 220 smtp.example.com Service Ready
+[23:18:30] /127.0.0.1:60555 disconnected
+[23:18:30] /127.0.0.1:60556 <- 220 smtp.example.com Service Ready
+[23:18:30] /127.0.0.1:60556 disconnected
+[23:18:35] /127.0.0.1:60562 connected
+[23:18:35] /127.0.0.1:60563 connected
+[23:18:35] /127.0.0.1:60562 <- 220 smtp.example.com Service Ready
+[23:18:35] /127.0.0.1:60563 <- 220 smtp.example.com Service Ready
+[23:18:35] /127.0.0.1:60562 disconnected
+[23:18:35] /127.0.0.1:60563 disconnected
+[23:18:40] /127.0.0.1:60568 connected
+[23:18:40] /127.0.0.1:60569 connected
+[23:18:40] /127.0.0.1:60568 <- 220 smtp.example.com Service Ready
+[23:18:40] /127.0.0.1:60569 <- 220 smtp.example.com Service Ready
+[23:18:40] /127.0.0.1:60568 disconnected
+[23:18:40] /127.0.0.1:60569 disconnected
+[23:18:45] /127.0.0.1:60574 connected
+[23:18:45] /127.0.0.1:60575 connected
+[23:18:45] /127.0.0.1:60574 <- 220 smtp.example.com Service Ready
+[23:18:45] /127.0.0.1:60574 disconnected
+[23:18:45] /127.0.0.1:60575 <- 220 smtp.example.com Service Ready
+[23:18:45] /127.0.0.1:60575 disconnected
+[23:18:50] /127.0.0.1:49351 connected
+[23:18:50] /127.0.0.1:49351 <- 220 smtp.example.com Service Ready
+[23:18:50] /127.0.0.1:49352 connected
+[23:18:50] /127.0.0.1:49351 disconnected
+[23:18:50] /127.0.0.1:49352 <- 220 smtp.example.com Service Ready
+[23:18:50] /127.0.0.1:49352 disconnected
+[23:18:55] /127.0.0.1:49357 connected
+[23:18:55] /127.0.0.1:49358 connected
+[23:18:55] /127.0.0.1:49357 <- 220 smtp.example.com Service Ready
+[23:18:55] /127.0.0.1:49357 disconnected
+[23:18:55] /127.0.0.1:49358 <- 220 smtp.example.com Service Ready
+[23:18:55] /127.0.0.1:49358 disconnected
+[23:19:00] /127.0.0.1:49364 connected
+[23:19:00] /127.0.0.1:49365 connected
+[23:19:00] /127.0.0.1:49364 <- 220 smtp.example.com Service Ready
+[23:19:00] /127.0.0.1:49364 disconnected
+[23:19:00] /127.0.0.1:49365 <- 220 smtp.example.com Service Ready
+[23:19:00] /127.0.0.1:49365 disconnected
+[23:20:41] SMTP Server started on port 2526
+[23:20:42] /127.0.0.1:61286 connected
+[23:20:42] /127.0.0.1:61286 <- 220 smtp.example.com Service Ready
+[23:20:42] /127.0.0.1:61286 disconnected
+[23:20:47] /127.0.0.1:61292 connected
+[23:20:47] /127.0.0.1:61292 <- 220 smtp.example.com Service Ready
+[23:20:47] /127.0.0.1:61292 disconnected
+[23:20:50] SMTP Server started on port 2527
+[23:20:52] /127.0.0.1:61299 connected
+[23:20:52] /127.0.0.1:61300 connected
+[23:20:52] /127.0.0.1:61299 <- 220 smtp.example.com Service Ready
+[23:20:52] /127.0.0.1:61299 disconnected
+[23:20:52] /127.0.0.1:61300 <- 220 smtp.example.com Service Ready
+[23:20:57] /127.0.0.1:61305 connected
+[23:20:57] /127.0.0.1:61308 connected
+[23:20:57] /127.0.0.1:61308 <- 220 smtp.example.com Service Ready
+[23:20:57] /127.0.0.1:61305 <- 220 smtp.example.com Service Ready
+[23:20:57] /127.0.0.1:61305 disconnected
+[23:20:57] /127.0.0.1:61308 disconnected
+[23:21:02] /127.0.0.1:61311 connected
+[23:21:02] /127.0.0.1:61311 <- 220 smtp.example.com Service Ready
+[23:21:02] /127.0.0.1:61312 connected
+[23:21:02] /127.0.0.1:61311 disconnected
+[23:21:02] /127.0.0.1:61312 <- 220 smtp.example.com Service Ready
+[23:21:02] /127.0.0.1:61312 disconnected
+[23:21:07] /127.0.0.1:61317 connected
+[23:21:07] /127.0.0.1:61318 connected
+[23:21:07] /127.0.0.1:61317 <- 220 smtp.example.com Service Ready
+[23:21:07] /127.0.0.1:61317 disconnected
+[23:21:07] /127.0.0.1:61318 <- 220 smtp.example.com Service Ready
+[23:21:07] /127.0.0.1:61318 disconnected
+[23:21:12] /127.0.0.1:61323 connected
+[23:21:12] /127.0.0.1:61324 connected
+[23:21:12] /127.0.0.1:61323 <- 220 smtp.example.com Service Ready
+[23:21:12] /127.0.0.1:61323 disconnected
+[23:21:12] /127.0.0.1:61324 <- 220 smtp.example.com Service Ready
+[23:21:12] /127.0.0.1:61324 disconnected
+[23:21:17] /127.0.0.1:61335 connected
+[23:21:17] /127.0.0.1:61336 connected
+[23:21:17] /127.0.0.1:61335 <- 220 smtp.example.com Service Ready
+[23:21:17] /127.0.0.1:61336 <- 220 smtp.example.com Service Ready
+[23:21:17] /127.0.0.1:61335 disconnected
+[23:21:17] /127.0.0.1:61336 disconnected
+[23:21:22] /127.0.0.1:61371 connected
+[23:21:22] /127.0.0.1:61372 connected
+[23:21:22] /127.0.0.1:61371 <- 220 smtp.example.com Service Ready
+[23:21:22] /127.0.0.1:61372 <- 220 smtp.example.com Service Ready
+[23:21:22] /127.0.0.1:61371 disconnected
+[23:21:22] /127.0.0.1:61372 disconnected
+[23:21:27] /127.0.0.1:61384 connected
+[23:21:27] /127.0.0.1:61385 connected
+[23:21:27] /127.0.0.1:61384 <- 220 smtp.example.com Service Ready
+[23:21:27] /127.0.0.1:61385 <- 220 smtp.example.com Service Ready
+[23:21:27] /127.0.0.1:61384 disconnected
+[23:21:27] /127.0.0.1:61385 disconnected
+[23:21:32] /127.0.0.1:61391 connected
+[23:21:32] /127.0.0.1:61392 connected
+[23:21:32] /127.0.0.1:61391 <- 220 smtp.example.com Service Ready
+[23:21:32] /127.0.0.1:61392 <- 220 smtp.example.com Service Ready
+[23:21:32] /127.0.0.1:61391 disconnected
+[23:21:32] /127.0.0.1:61392 disconnected
+[23:21:37] /127.0.0.1:61427 connected
+[23:21:37] /127.0.0.1:61429 connected
+[23:21:37] /127.0.0.1:61427 <- 220 smtp.example.com Service Ready
+[23:21:37] /127.0.0.1:61427 disconnected
+[23:21:37] /127.0.0.1:61429 <- 220 smtp.example.com Service Ready
+[23:21:37] /127.0.0.1:61429 disconnected
+[23:21:42] /127.0.0.1:61434 connected
+[23:21:42] /127.0.0.1:61435 connected
+[23:21:42] /127.0.0.1:61435 <- 220 smtp.example.com Service Ready
+[23:21:42] /127.0.0.1:61434 <- 220 smtp.example.com Service Ready
+[23:21:42] /127.0.0.1:61435 disconnected
+[23:21:42] /127.0.0.1:61434 disconnected
+[23:21:47] /127.0.0.1:61440 connected
+[23:21:47] /127.0.0.1:61441 connected
+[23:21:47] /127.0.0.1:61441 <- 220 smtp.example.com Service Ready
+[23:21:47] /127.0.0.1:61440 <- 220 smtp.example.com Service Ready
+[23:21:47] /127.0.0.1:61440 disconnected
+[23:21:52] /127.0.0.1:61446 connected
+[23:21:52] /127.0.0.1:61447 connected
+[23:21:52] /127.0.0.1:61446 <- 220 smtp.example.com Service Ready
+[23:21:52] /127.0.0.1:61446 disconnected
+[23:21:52] /127.0.0.1:61447 <- 220 smtp.example.com Service Ready
+[23:21:52] /127.0.0.1:61447 disconnected
+[23:21:57] /127.0.0.1:61452 connected
+[23:21:57] /127.0.0.1:61453 connected
+[23:21:57] /127.0.0.1:61452 <- 220 smtp.example.com Service Ready
+[23:21:57] /127.0.0.1:61452 disconnected
+[23:21:57] /127.0.0.1:61453 <- 220 smtp.example.com Service Ready
+[23:21:58] /127.0.0.1:61453 disconnected
+[23:22:02] /127.0.0.1:61458 connected
+[23:22:03] /127.0.0.1:61459 connected
+[23:22:03] /127.0.0.1:61459 <- 220 smtp.example.com Service Ready
+[23:22:03] /127.0.0.1:61459 disconnected
+[23:22:03] /127.0.0.1:61458 <- 220 smtp.example.com Service Ready
+[23:22:03] /127.0.0.1:61458 disconnected
+[23:22:08] /127.0.0.1:61500 connected
+[23:22:08] /127.0.0.1:61501 connected
+[23:22:08] /127.0.0.1:61501 <- 220 smtp.example.com Service Ready
+[23:22:08] /127.0.0.1:61500 <- 220 smtp.example.com Service Ready
+[23:22:08] /127.0.0.1:61501 disconnected
+[23:22:08] /127.0.0.1:61500 disconnected
+[23:22:13] /127.0.0.1:61506 connected
+[23:22:13] /127.0.0.1:61507 connected
+[23:22:13] /127.0.0.1:61506 <- 220 smtp.example.com Service Ready
+[23:22:13] /127.0.0.1:61507 <- 220 smtp.example.com Service Ready
+[23:22:13] /127.0.0.1:61506 disconnected
+[23:22:13] /127.0.0.1:61507 disconnected
+[23:22:18] /127.0.0.1:61513 connected
+[23:22:18] /127.0.0.1:61514 connected
+[23:22:18] /127.0.0.1:61513 <- 220 smtp.example.com Service Ready
+[23:22:18] /127.0.0.1:61513 disconnected
+[23:22:18] /127.0.0.1:61514 <- 220 smtp.example.com Service Ready
+[23:22:18] /127.0.0.1:61514 disconnected
+[23:22:23] /127.0.0.1:61520 connected
+[23:22:23] /127.0.0.1:61521 connected
+[23:22:23] /127.0.0.1:61520 <- 220 smtp.example.com Service Ready
+[23:22:23] /127.0.0.1:61520 disconnected
+[23:22:23] /127.0.0.1:61521 <- 220 smtp.example.com Service Ready
+[23:22:23] /127.0.0.1:61521 disconnected
+[23:22:28] /127.0.0.1:61529 connected
+[23:22:28] /127.0.0.1:61530 connected
+[23:22:28] /127.0.0.1:61529 <- 220 smtp.example.com Service Ready
+[23:22:28] /127.0.0.1:61529 disconnected
+[23:22:28] /127.0.0.1:61530 <- 220 smtp.example.com Service Ready
+[23:22:28] /127.0.0.1:61530 disconnected
+[23:22:33] /127.0.0.1:61539 connected
+[23:22:33] /127.0.0.1:61540 connected
+[23:22:33] /127.0.0.1:61539 <- 220 smtp.example.com Service Ready
+[23:22:33] /127.0.0.1:61540 <- 220 smtp.example.com Service Ready
+[23:22:33] /127.0.0.1:61539 disconnected
+[23:22:33] /127.0.0.1:61540 disconnected
+[23:22:38] /127.0.0.1:61547 connected
+[23:22:38] /127.0.0.1:61548 connected
+[23:22:38] /127.0.0.1:61547 <- 220 smtp.example.com Service Ready
+[23:22:38] /127.0.0.1:61548 <- 220 smtp.example.com Service Ready
+[23:22:38] /127.0.0.1:61547 disconnected
+[23:22:38] /127.0.0.1:61548 disconnected
+[23:22:43] /127.0.0.1:61556 connected
+[23:22:43] /127.0.0.1:61557 connected
+[23:22:43] /127.0.0.1:61556 <- 220 smtp.example.com Service Ready
+[23:22:43] /127.0.0.1:61556 disconnected
+[23:22:43] /127.0.0.1:61557 <- 220 smtp.example.com Service Ready
+[23:22:43] /127.0.0.1:61557 disconnected
+[23:22:48] /127.0.0.1:53354 connected
+[23:22:48] /127.0.0.1:53355 connected
+[23:22:48] /127.0.0.1:53354 <- 220 smtp.example.com Service Ready
+[23:22:48] /127.0.0.1:53354 disconnected
+[23:22:48] /127.0.0.1:53355 <- 220 smtp.example.com Service Ready
+[23:22:48] /127.0.0.1:53355 disconnected
+[23:22:53] /127.0.0.1:53361 connected
+[23:22:53] /127.0.0.1:53362 connected
+[23:22:53] /127.0.0.1:53361 <- 220 smtp.example.com Service Ready
+[23:22:53] /127.0.0.1:53361 disconnected
+[23:22:53] /127.0.0.1:53362 <- 220 smtp.example.com Service Ready
+[23:22:53] /127.0.0.1:53362 disconnected
+[23:22:58] /127.0.0.1:53370 connected
+[23:22:58] /127.0.0.1:53371 connected
+[23:22:58] /127.0.0.1:53371 <- 220 smtp.example.com Service Ready
+[23:22:58] /127.0.0.1:53371 disconnected
+[23:22:58] /127.0.0.1:53370 <- 220 smtp.example.com Service Ready
+[23:22:58] /127.0.0.1:53370 disconnected
+[23:23:03] /127.0.0.1:53376 connected
+[23:23:03] /127.0.0.1:53377 connected
+[23:23:03] /127.0.0.1:53376 <- 220 smtp.example.com Service Ready
+[23:23:03] /127.0.0.1:53377 <- 220 smtp.example.com Service Ready
+[23:23:03] /127.0.0.1:53376 disconnected
+[23:23:03] /127.0.0.1:53377 disconnected
+[23:23:08] /127.0.0.1:53382 connected
+[23:23:08] /127.0.0.1:53383 connected
+[23:23:08] /127.0.0.1:53382 <- 220 smtp.example.com Service Ready
+[23:23:08] /127.0.0.1:53382 disconnected
+[23:23:08] /127.0.0.1:53383 <- 220 smtp.example.com Service Ready
+[23:23:08] /127.0.0.1:53383 disconnected
+[23:23:13] /127.0.0.1:53388 connected
+[23:23:13] /127.0.0.1:53389 connected
+[23:23:13] /127.0.0.1:53388 <- 220 smtp.example.com Service Ready
+[23:23:13] /127.0.0.1:53389 <- 220 smtp.example.com Service Ready
+[23:23:13] /127.0.0.1:53388 disconnected
+[23:23:13] /127.0.0.1:53389 disconnected
+[23:23:18] /127.0.0.1:53396 connected
+[23:23:18] /127.0.0.1:53397 connected
+[23:23:18] /127.0.0.1:53396 <- 220 smtp.example.com Service Ready
+[23:23:18] /127.0.0.1:53396 disconnected
+[23:23:18] /127.0.0.1:53397 <- 220 smtp.example.com Service Ready
+[23:23:18] /127.0.0.1:53397 disconnected
+[23:23:23] /127.0.0.1:53403 connected
+[23:23:23] /127.0.0.1:53404 connected
+[23:23:23] /127.0.0.1:53403 <- 220 smtp.example.com Service Ready
+[23:23:23] /127.0.0.1:53403 disconnected
+[23:23:23] /127.0.0.1:53404 <- 220 smtp.example.com Service Ready
+[23:23:23] /127.0.0.1:53404 disconnected
+[23:23:28] /127.0.0.1:51717 connected
+[23:23:28] /127.0.0.1:51718 connected
+[23:23:28] /127.0.0.1:51717 <- 220 smtp.example.com Service Ready
+[23:23:28] /127.0.0.1:51717 disconnected
+[23:23:28] /127.0.0.1:51718 <- 220 smtp.example.com Service Ready
+[23:23:28] /127.0.0.1:51718 disconnected
+[23:23:33] /127.0.0.1:51727 connected
+[23:23:33] /127.0.0.1:51727 <- 220 smtp.example.com Service Ready
+[23:23:33] /127.0.0.1:51728 connected
+[23:23:33] /127.0.0.1:51727 disconnected
+[23:23:33] /127.0.0.1:51728 <- 220 smtp.example.com Service Ready
+[23:23:33] /127.0.0.1:51728 disconnected
+[23:23:38] /127.0.0.1:51735 connected
+[23:23:38] /127.0.0.1:51736 connected
+[23:23:38] /127.0.0.1:51735 <- 220 smtp.example.com Service Ready
+[23:23:38] /127.0.0.1:51736 <- 220 smtp.example.com Service Ready
+[23:23:38] /127.0.0.1:51735 disconnected
+[23:23:38] /127.0.0.1:51736 disconnected
+[23:23:43] /127.0.0.1:60875 connected
+[23:23:43] /127.0.0.1:60876 connected
+[23:23:43] /127.0.0.1:60875 <- 220 smtp.example.com Service Ready
+[23:23:43] /127.0.0.1:60876 <- 220 smtp.example.com Service Ready
+[23:23:43] /127.0.0.1:60876 disconnected
+[23:23:43] /127.0.0.1:60875 disconnected
+[23:23:48] /127.0.0.1:54201 connected
+[23:23:48] /127.0.0.1:54202 connected
+[23:23:48] /127.0.0.1:54202 <- 220 smtp.example.com Service Ready
+[23:23:48] /127.0.0.1:54202 disconnected
+[23:23:48] /127.0.0.1:54201 <- 220 smtp.example.com Service Ready
+[23:23:48] /127.0.0.1:54201 disconnected
+[23:23:53] /127.0.0.1:54207 connected
+[23:23:53] /127.0.0.1:54208 connected
+[23:23:53] /127.0.0.1:54207 <- 220 smtp.example.com Service Ready
+[23:23:53] /127.0.0.1:54207 disconnected
+[23:23:53] /127.0.0.1:54208 <- 220 smtp.example.com Service Ready
+[23:23:53] /127.0.0.1:54208 disconnected
+[23:23:58] /127.0.0.1:54213 connected
+[23:23:58] /127.0.0.1:54214 connected
+[23:23:58] /127.0.0.1:54213 <- 220 smtp.example.com Service Ready
+[23:23:58] /127.0.0.1:54214 <- 220 smtp.example.com Service Ready
+[23:23:58] /127.0.0.1:54213 disconnected
+[23:23:58] /127.0.0.1:54214 disconnected
+[23:24:03] /127.0.0.1:54890 connected
+[23:24:03] /127.0.0.1:54891 connected
+[23:24:03] /127.0.0.1:54890 <- 220 smtp.example.com Service Ready
+[23:24:03] /127.0.0.1:54890 disconnected
+[23:24:03] /127.0.0.1:54891 <- 220 smtp.example.com Service Ready
+[23:24:03] /127.0.0.1:54891 disconnected
+[23:24:08] /127.0.0.1:54896 connected
+[23:24:08] /127.0.0.1:54897 connected
+[23:24:08] /127.0.0.1:54896 <- 220 smtp.example.com Service Ready
+[23:24:08] /127.0.0.1:54897 <- 220 smtp.example.com Service Ready
+[23:24:08] /127.0.0.1:54896 disconnected
+[23:24:08] /127.0.0.1:54897 disconnected
+[23:24:13] /127.0.0.1:54902 connected
+[23:24:13] /127.0.0.1:54903 connected
+[23:24:13] /127.0.0.1:54902 <- 220 smtp.example.com Service Ready
+[23:24:13] /127.0.0.1:54903 <- 220 smtp.example.com Service Ready
+[23:24:13] /127.0.0.1:54902 disconnected
+[23:24:13] /127.0.0.1:54903 disconnected
+[23:24:18] /127.0.0.1:63622 connected
+[23:24:18] /127.0.0.1:63623 connected
+[23:24:18] /127.0.0.1:63623 <- 220 smtp.example.com Service Ready
+[23:24:18] /127.0.0.1:63622 <- 220 smtp.example.com Service Ready
+[23:24:18] /127.0.0.1:63622 disconnected
+[23:24:18] /127.0.0.1:63623 disconnected
+[23:24:23] /127.0.0.1:63629 connected
+[23:24:23] /127.0.0.1:63630 connected
+[23:24:23] /127.0.0.1:63629 <- 220 smtp.example.com Service Ready
+[23:24:23] /127.0.0.1:63629 disconnected
+[23:24:23] /127.0.0.1:63630 <- 220 smtp.example.com Service Ready
+[23:24:23] /127.0.0.1:63630 disconnected
+[23:24:28] /127.0.0.1:63637 connected
+[23:24:28] /127.0.0.1:63638 connected
+[23:24:28] /127.0.0.1:63637 <- 220 smtp.example.com Service Ready
+[23:24:28] /127.0.0.1:63637 disconnected
+[23:24:28] /127.0.0.1:63638 <- 220 smtp.example.com Service Ready
+[23:24:28] /127.0.0.1:63638 disconnected
+[23:24:33] /127.0.0.1:58865 connected
+[23:24:33] /127.0.0.1:58866 connected
+[23:24:33] /127.0.0.1:58865 <- 220 smtp.example.com Service Ready
+[23:24:33] /127.0.0.1:58866 <- 220 smtp.example.com Service Ready
+[23:24:33] /127.0.0.1:58865 disconnected
+[23:24:33] /127.0.0.1:58866 disconnected
+[23:24:38] /127.0.0.1:58878 connected
+[23:24:38] /127.0.0.1:58878 <- 220 smtp.example.com Service Ready
+[23:24:38] /127.0.0.1:58878 disconnected
+[23:27:33] SMTP Server started on port 2527
+[23:27:35] SMTP Server started on port 2526
+[23:35:56] SMTP Server started on port 2526
+[23:35:59] SMTP Server started on port 2527
+[23:41:16] Server error: Address already in use: bind
+[23:48:38] SMTP Server started on port 25
+[23:49:39] /127.0.0.1:51593 connected
+[23:49:40] /127.0.0.1:51593 <- 220 smtp.example.com Service Ready
+[23:49:40] /127.0.0.1:51593 -> HELO web-client
+[23:49:40] /127.0.0.1:51593 <- 250 Hello web-client
+[23:49:40] /127.0.0.1:51593 -> MAIL FROM:<mahmoud@example.com>
+[23:49:41] /127.0.0.1:51593 Connecté au service RMI
+[23:49:41] /127.0.0.1:51593 RMI userExists(mahmoud) -> true
+[23:49:41] /127.0.0.1:51593 <- 250 OK
+[23:49:41] /127.0.0.1:51593 -> RCPT TO:<charara@gmail.com@example.com>
+[23:49:41] /127.0.0.1:51593 <- 250 OK
+[23:49:41] /127.0.0.1:51593 -> DATA
+[23:49:41] /127.0.0.1:51593 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[23:49:41] /127.0.0.1:51593 -> Subject: permision
+[23:49:41] /127.0.0.1:51593 -> From: mahmoud@example.com
+[23:49:41] /127.0.0.1:51593 -> To: charara@gmail.com@example.com
+[23:49:41] /127.0.0.1:51593 -> 
+[23:49:41] /127.0.0.1:51593 -> http://localhost:8080
+[23:49:41] /127.0.0.1:51593 -> .
+[23:49:43] /127.0.0.1:51593 Stored email for charara in Database
+[23:49:43] /127.0.0.1:51593 <- 250 OK: Message accepted for delivery
+[23:49:43] /127.0.0.1:51593 -> QUIT
+[23:49:43] /127.0.0.1:51593 <- 221 smtp.example.com Service closing transmission channel
+[23:51:06] /127.0.0.1:52896 connected
+[23:51:06] /127.0.0.1:52896 <- 220 smtp.example.com Service Ready
+[23:51:06] /127.0.0.1:52896 -> EHLO DESKTOP-TTJG3HH.mshome.net
+[23:51:06] /127.0.0.1:52896 <- 250 Hello DESKTOP-TTJG3HH.mshome.net
+[23:51:06] /127.0.0.1:52896 -> MAIL FROM:<charara@example.com>
+[23:51:06] /127.0.0.1:52896 Connecté au service RMI
+[23:51:06] /127.0.0.1:52896 RMI userExists(charara) -> true
+[23:51:06] /127.0.0.1:52896 <- 250 OK
+[23:51:06] /127.0.0.1:52896 -> RCPT TO:<mahmoud@gmail.com>
+[23:51:06] /127.0.0.1:52896 <- 250 OK
+[23:51:06] /127.0.0.1:52896 -> DATA
+[23:51:06] /127.0.0.1:52896 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[23:51:06] /127.0.0.1:52896 -> Date: Sun, 19 Apr 2026 23:51:06 +0100 (CET)
+[23:51:06] /127.0.0.1:52896 -> From: charara@example.com
+[23:51:06] /127.0.0.1:52896 -> To: mahmoud@gmail.com
+[23:51:06] /127.0.0.1:52896 -> Message-ID: <5771604.0.1776639066515@DESKTOP-TTJG3HH.mshome.net>
+[23:51:06] /127.0.0.1:52896 -> Subject: vakefakevbkav
+[23:51:06] /127.0.0.1:52896 -> MIME-Version: 1.0
+[23:51:06] /127.0.0.1:52896 -> Content-Type: text/plain; charset=UTF-8
+[23:51:06] /127.0.0.1:52896 -> Content-Transfer-Encoding: 7bit
+[23:51:06] /127.0.0.1:52896 -> 
+[23:51:06] /127.0.0.1:52896 -> czebvzelvzelvbz
+[23:51:06] /127.0.0.1:52896 -> .
+[23:51:06] /127.0.0.1:52896 Stored email for mahmoud in Database
+[23:51:06] /127.0.0.1:52896 <- 250 OK: Message accepted for delivery
+[23:51:06] /127.0.0.1:52896 -> QUIT
+[23:51:06] /127.0.0.1:52896 <- 221 smtp.example.com Service closing transmission channel
+[23:51:14] /127.0.0.1:52901 connected
+[23:51:14] /127.0.0.1:52901 <- 220 smtp.example.com Service Ready
+[23:51:14] /127.0.0.1:52901 -> EHLO DESKTOP-TTJG3HH.mshome.net
+[23:51:14] /127.0.0.1:52901 <- 250 Hello DESKTOP-TTJG3HH.mshome.net
+[23:51:14] /127.0.0.1:52901 -> MAIL FROM:<charara@example.com>
+[23:51:14] /127.0.0.1:52901 Connecté au service RMI
+[23:51:14] /127.0.0.1:52901 RMI userExists(charara) -> true
+[23:51:14] /127.0.0.1:52901 <- 250 OK
+[23:51:14] /127.0.0.1:52901 -> RCPT TO:<mahmoud@gmail.com>
+[23:51:14] /127.0.0.1:52901 <- 250 OK
+[23:51:14] /127.0.0.1:52901 -> DATA
+[23:51:14] /127.0.0.1:52901 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[23:51:14] /127.0.0.1:52901 -> Date: Sun, 19 Apr 2026 23:51:14 +0100 (CET)
+[23:51:14] /127.0.0.1:52901 -> From: charara@example.com
+[23:51:14] /127.0.0.1:52901 -> To: mahmoud@gmail.com
+[23:51:14] /127.0.0.1:52901 -> Message-ID: <996710641.1.1776639074423@DESKTOP-TTJG3HH.mshome.net>
+[23:51:14] /127.0.0.1:52901 -> Subject: vakefakevbkav
+[23:51:14] /127.0.0.1:52901 -> MIME-Version: 1.0
+[23:51:14] /127.0.0.1:52901 -> Content-Type: text/plain; charset=UTF-8
+[23:51:14] /127.0.0.1:52901 -> Content-Transfer-Encoding: 7bit
+[23:51:14] /127.0.0.1:52901 -> 
+[23:51:14] /127.0.0.1:52901 -> .
+[23:51:14] /127.0.0.1:52901 Stored email for mahmoud in Database
+[23:51:14] /127.0.0.1:52901 <- 250 OK: Message accepted for delivery
+[23:51:14] /127.0.0.1:52901 -> QUIT
+[23:51:14] /127.0.0.1:52901 <- 221 smtp.example.com Service closing transmission channel
+[23:51:22] /127.0.0.1:62084 connected
+[23:51:22] /127.0.0.1:62084 <- 220 smtp.example.com Service Ready
+[23:51:22] /127.0.0.1:62084 -> EHLO DESKTOP-TTJG3HH.mshome.net
+[23:51:22] /127.0.0.1:62084 <- 250 Hello DESKTOP-TTJG3HH.mshome.net
+[23:51:22] /127.0.0.1:62084 -> MAIL FROM:<charara@example.com>
+[23:51:22] /127.0.0.1:62084 Connecté au service RMI
+[23:51:22] /127.0.0.1:62084 RMI userExists(charara) -> true
+[23:51:22] /127.0.0.1:62084 <- 250 OK
+[23:51:22] /127.0.0.1:62084 -> RCPT TO:<mahmoud@gmail.com>
+[23:51:22] /127.0.0.1:62084 <- 250 OK
+[23:51:22] /127.0.0.1:62084 -> DATA
+[23:51:22] /127.0.0.1:62084 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[23:51:22] /127.0.0.1:62084 -> Date: Sun, 19 Apr 2026 23:51:22 +0100 (CET)
+[23:51:22] /127.0.0.1:62084 -> From: charara@example.com
+[23:51:22] /127.0.0.1:62084 -> To: mahmoud@gmail.com
+[23:51:22] /127.0.0.1:62084 -> Message-ID: <860569957.2.1776639082957@DESKTOP-TTJG3HH.mshome.net>
+[23:51:22] /127.0.0.1:62084 -> Subject: vakefakevbkav
+[23:51:22] /127.0.0.1:62084 -> MIME-Version: 1.0
+[23:51:22] /127.0.0.1:62084 -> Content-Type: text/plain; charset=UTF-8
+[23:51:22] /127.0.0.1:62084 -> Content-Transfer-Encoding: 7bit
+[23:51:22] /127.0.0.1:62084 -> 
+[23:51:22] /127.0.0.1:62084 -> vzevzvebzab
+[23:51:22] /127.0.0.1:62084 -> .
+[23:51:23] /127.0.0.1:62084 Stored email for mahmoud in Database
+[23:51:23] /127.0.0.1:62084 <- 250 OK: Message accepted for delivery
+[23:51:23] /127.0.0.1:62084 -> QUIT
+[23:51:23] /127.0.0.1:62084 <- 221 smtp.example.com Service closing transmission channel
+[23:51:29] /127.0.0.1:62089 connected
+[23:51:29] /127.0.0.1:62089 <- 220 smtp.example.com Service Ready
+[23:51:29] /127.0.0.1:62089 -> EHLO DESKTOP-TTJG3HH.mshome.net
+[23:51:29] /127.0.0.1:62089 <- 250 Hello DESKTOP-TTJG3HH.mshome.net
+[23:51:29] /127.0.0.1:62089 -> MAIL FROM:<charara@example.com>
+[23:51:29] /127.0.0.1:62089 Connecté au service RMI
+[23:51:29] /127.0.0.1:62089 RMI userExists(charara) -> true
+[23:51:29] /127.0.0.1:62089 <- 250 OK
+[23:51:29] /127.0.0.1:62089 -> RCPT TO:<mahmoud@gmail.com>
+[23:51:29] /127.0.0.1:62089 <- 250 OK
+[23:51:29] /127.0.0.1:62089 -> DATA
+[23:51:29] /127.0.0.1:62089 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[23:51:29] /127.0.0.1:62089 -> Date: Sun, 19 Apr 2026 23:51:29 +0100 (CET)
+[23:51:29] /127.0.0.1:62089 -> From: charara@example.com
+[23:51:29] /127.0.0.1:62089 -> To: mahmoud@gmail.com
+[23:51:29] /127.0.0.1:62089 -> Message-ID: <1396905576.3.1776639089103@DESKTOP-TTJG3HH.mshome.net>
+[23:51:29] /127.0.0.1:62089 -> Subject: vakefakevbkav
+[23:51:29] /127.0.0.1:62089 -> MIME-Version: 1.0
+[23:51:29] /127.0.0.1:62089 -> Content-Type: text/plain; charset=UTF-8
+[23:51:29] /127.0.0.1:62089 -> Content-Transfer-Encoding: 7bit
+[23:51:29] /127.0.0.1:62089 -> 
+[23:51:29] /127.0.0.1:62089 -> .
+[23:51:29] /127.0.0.1:62089 Stored email for mahmoud in Database
+[23:51:29] /127.0.0.1:62089 <- 250 OK: Message accepted for delivery
+[23:51:29] /127.0.0.1:62089 -> QUIT
+[23:51:29] /127.0.0.1:62089 <- 221 smtp.example.com Service closing transmission channel

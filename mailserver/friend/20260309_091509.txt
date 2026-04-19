@@ -1,8 +1,0 @@
-From: ahmed@zmaill.com
-To: friend@zmaill.com
-Date: Mon, 09 Mar 2026 09:15:09 -0500
-Subject: Test Email
-
-Bonjour,
-Ceci est un test SMTP.
-Ahmed

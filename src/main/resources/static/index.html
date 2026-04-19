@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messagerie Distribuée</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ZONE DE NOTIFICATION -->
+    <div id="toast" class="toast"></div>
+
+    <!-- ÉCRAN DE CONNEXION -->
+    <div id="login-screen" class="screen full-center active">
+        <div class="glass-card login-card">
+            <div class="logo">
+                <i class="fa-solid fa-paper-plane"></i>
+                <h2>SkyMail</h2>
+            </div>
+            <p class="subtitle" id="form-subtitle">Connexion à votre espace</p>
+            <form id="auth-form">
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" placeholder="Mot de passe" required>
+                </div>
+                <button type="submit" class="btn primary-btn pulse-glow" id="auth-btn">
+                    <span>Se connecter</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+            <div class="auth-switch">
+                <span id="auth-switch-text">Pas encore de compte ?</span>
+                <button class="text-btn" onclick="toggleAuthMode()" id="auth-switch-link">S'inscrire</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ÉCRAN PRINCIPAL -->
+    <div id="main-screen" class="screen main-layout hidden">
+        <!-- BARRE LATÉRALE -->
+        <aside class="sidebar glass-panel">
+            <div class="sidebar-header">
+                <div class="logo small-logo">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <h3>SkyMail</h3>
+                </div>
+            </div>
+            <div class="sidebar-user">
+                <div class="avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+                <div class="user-info">
+                    <span id="current-user" class="user-name">Utilisateur</span>
+                    <span class="user-status">En ligne</span>
+                </div>
+            </div>
+            <button class="btn compose-btn" onclick="openComposeModal()">
+                <i class="fa-solid fa-pen"></i>
+                Nouveau message
+            </button>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" id="nav-inbox" onclick="switchTab('inbox')">
+                    <i class="fa-solid fa-inbox"></i>
+                    Boîte de réception
+                    <span id="unread-badge" class="badge">0</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-sent" onclick="switchTab('sent')">
+                    <i class="fa-regular fa-paper-plane"></i> Envoyés
+                </a>
+                <a href="#" class="nav-item" id="nav-trash" onclick="switchTab('trash')">
+                    <i class="fa-solid fa-trash"></i> Corbeille
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn logout-btn" onclick="logout()">
+                    <i class="fa-solid fa-sign-out-alt"></i> Déconnexion
+                </button>
+            </div>
+        </aside>
+
+        <!-- LISTE DES MESSAGES -->
+        <section class="inbox-panel">
+            <header class="panel-header">
+                <h2 id="panel-title">Boîte de réception</h2>
+                <button class="icon-btn" onclick="refreshCurrentTab()" title="Rafraîchir">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+            </header>
+            <div id="email-list" class="email-list">
+                <!-- Les emails seront injectés ici par JS -->
+                <div class="empty-state">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <p>Votre boîte de réception est vide.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LECTURE DE MESSAGE -->
+        <section class="read-panel glass-panel">
+            <div id="read-empty" class="read-empty active">
+                <div class="empty-state">
+                    <i class="fa-regular fa-comments"></i>
+                    <p>Sélectionnez un message pour le lire</p>
+                </div>
+            </div>
+            <div id="read-content" class="read-content hidden">
+                <header class="mail-header">
+                    <div class="mail-meta">
+                        <div class="sender-avatar" id="read-avatar">M</div>
+                        <div class="mail-info">
+                            <h3 id="read-subject">Sujet du message</h3>
+                            <p class="sender">De : <span id="read-sender">expediteur@example.com</span></p>
+                        </div>
+                    </div>
+                    <div class="mail-actions">
+                        <span id="read-date" class="date-text">Aujourd'hui à 10:00</span>
+                        <button class="icon-btn danger" id="delete-btn" title="Supprimer">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </header>
+                <div class="mail-body">
+                    <p id="read-body">Contenu du message...</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- MODAL NOUVEAU MESSAGE -->
+    <div id="compose-modal" class="modal-overlay hidden">
+        <div class="modal-content glass-card">
+            <header class="modal-header">
+                <h3>Nouveau message</h3>
+                <button class="icon-btn" onclick="closeComposeModal()"><i class="fa-solid fa-times"></i></button>
+            </header>
+            <form id="compose-form" class="compose-form">
+                <div class="form-group">
+                    <label>À</label>
+                    <input type="text" id="compose-to" placeholder="Nom d'utilisateur destinataire" required>
+                </div>
+                <div class="form-group">
+                    <label>Sujet</label>
+                    <input type="text" id="compose-subject" placeholder="Sujet du message" required>
+                </div>
+                <div class="form-group flex-grow">
+                    <textarea id="compose-body" placeholder="Rédigez votre message ici..." required></textarea>
+                </div>
+                <footer class="modal-footer">
+                    <button type="button" class="btn secondary-btn" onclick="closeComposeModal()">Annuler</button>
+                    <button type="submit" class="btn primary-btn">
+                        <i class="fa-solid fa-paper-plane"></i> Envoyer
+                    </button>
+                </footer>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

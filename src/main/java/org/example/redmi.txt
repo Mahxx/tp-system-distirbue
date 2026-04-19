@@ -1,0 +1,8 @@
+java -cp target\classes org.example.AuthServer
+java -cp target\classes org.example.AdminClient
+java -cp target\classes org.example.Pop3ServerGUI
+telnet localhost 110
+
+  pour libire port 
+   netstat -ano | findstr :110
+   taskkill /PID 1604 /F

@@ -1,13 +1,36 @@
 package org.example;
 
-import javax.swing.*;
-import java.awt.*;
-import java.io.*;
-import java.net.*;
+import java.awt.BorderLayout;
+import java.awt.Font;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.SocketException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.SwingUtilities;
+
+/**
+ * SmtpServerGUI — même classe qu'à l'origine.
+ * MODIFICATION : SmtpSessionGUI.handleMailFrom() vérifie l'expéditeur via RMI.
+ */
 public class SmtpServerGUI {
 
     private JFrame frame;
@@ -23,7 +46,12 @@ public class SmtpServerGUI {
     private List<Socket> clients = Collections.synchronizedList(new ArrayList<>());
     private PrintWriter eventLogFile;
 
+    private static int PORT = 25; // port par defaut, peut etre remplace par args[0]
+
     public static void main(String[] args) {
+        if (args.length > 0) {
+            try { PORT = Integer.parseInt(args[0]); } catch (NumberFormatException ignored) {}
+        }
         SwingUtilities.invokeLater(() -> new SmtpServerGUI().createGUI());
     }
 
@@ -60,27 +88,25 @@ public class SmtpServerGUI {
     public void log(String message) {
         String time = new SimpleDateFormat("HH:mm:ss").format(new Date());
         String fullMessage = "[" + time + "] " + message;
-
         SwingUtilities.invokeLater(() -> {
             logArea.append(fullMessage + "\n");
             logArea.setCaretPosition(logArea.getDocument().getLength());
         });
-
-        if (eventLogFile != null) {
+        if (eventLogFile != null)
             eventLogFile.println(fullMessage);
-        }
     }
 
     private void startServer() {
-        if (running) return;
-
+        if (running)
+            return;
         running = true;
         startButton.setEnabled(false);
         stopButton.setEnabled(true);
 
         try {
             File logDir = new File("logs");
-            if (!logDir.exists()) logDir.mkdirs();
+            if (!logDir.exists())
+                logDir.mkdirs();
             eventLogFile = new PrintWriter(new FileWriter("logs/server_events.log", true), true);
         } catch (IOException e) {
             log("Cannot create log file: " + e.getMessage());
@@ -88,8 +114,8 @@ public class SmtpServerGUI {
 
         new Thread(() -> {
             try {
-                serverSocket = new ServerSocket(25);
-                log("SMTP Server started on port 25");
+                serverSocket = new ServerSocket(PORT);
+                log("SMTP Server started on port " + PORT);
 
                 while (running) {
                     try {
@@ -98,10 +124,10 @@ public class SmtpServerGUI {
                         log(client.getRemoteSocketAddress() + " connected");
                         new SmtpSessionGUI(client, this).start();
                     } catch (SocketException e) {
-                        if (!running) break;
+                        if (!running)
+                            break;
                     }
                 }
-
             } catch (IOException e) {
                 log("Server error: " + e.getMessage());
             }
@@ -111,28 +137,27 @@ public class SmtpServerGUI {
     private void stopServer() {
         running = false;
         log("Stopping server...");
-
         try {
-            if (serverSocket != null && !serverSocket.isClosed()) serverSocket.close();
-
+            if (serverSocket != null && !serverSocket.isClosed())
+                serverSocket.close();
             synchronized (clients) {
                 for (Socket client : clients) {
-                    try { client.close(); } catch (IOException ignored) {}
+                    try {
+                        client.close();
+                    } catch (IOException ignored) {
+                    }
                 }
                 clients.clear();
             }
-
             clientCount = 0;
             updateClients();
             log("All client connections closed");
             log("Server stopped");
-
-            if (eventLogFile != null) eventLogFile.close();
-
+            if (eventLogFile != null)
+                eventLogFile.close();
         } catch (IOException e) {
             log("Error stopping server: " + e.getMessage());
         }
-
         startButton.setEnabled(true);
         stopButton.setEnabled(false);
     }
@@ -150,7 +175,8 @@ public class SmtpServerGUI {
     public void removeClient(Socket client) {
         clients.remove(client);
         clientCount--;
-        if (clientCount < 0) clientCount = 0;
+        if (clientCount < 0)
+            clientCount = 0;
         updateClients();
     }
 
@@ -159,7 +185,10 @@ public class SmtpServerGUI {
     }
 }
 
-// --------------------- SMTP SESSION ------------------------
+// =====================================================================
+// SmtpSessionGUI — même nom qu'à l'origine
+// MODIFICATION : handleMailFrom() consulte RMI pour valider l'expéditeur
+// =====================================================================
 class SmtpSessionGUI extends Thread {
 
     private Socket socket;
@@ -167,12 +196,18 @@ class SmtpSessionGUI extends Thread {
     private PrintWriter out;
     private SmtpServerGUI gui;
 
-    private enum SmtpState { CONNECTED, HELO_RECEIVED, MAIL_FROM_SET, RCPT_TO_SET, DATA_RECEIVING }
+    private enum SmtpState {
+        CONNECTED, HELO_RECEIVED, MAIL_FROM_SET, RCPT_TO_SET, DATA_RECEIVING
+    }
 
     private SmtpState state;
     private String sender;
     private List<String> recipients;
     private StringBuilder dataBuffer;
+
+    // --- Connexion RMI ---
+    private AuthService authService;
+    private static final String RMI_HOST = "localhost";
 
     public SmtpSessionGUI(Socket socket, SmtpServerGUI gui) {
         this.socket = socket;
@@ -180,6 +215,29 @@ class SmtpSessionGUI extends Thread {
         this.state = SmtpState.CONNECTED;
         this.recipients = new ArrayList<>();
         this.dataBuffer = new StringBuilder();
+    }
+
+    /** Connexion lazy au registre RMI */
+    private AuthService getAuthService() {
+        if (authService == null) {
+            try {
+                Registry registry = LocateRegistry.getRegistry(RMI_HOST, AuthServer.RMI_PORT);
+                authService = (AuthService) registry.lookup(AuthServer.SERVICE_NAME);
+                gui.log(clientId() + " Connecté au service RMI");
+            } catch (Exception e) {
+                gui.log(clientId() + " WARN: RMI inaccessible - " + e.getMessage());
+            }
+        }
+        return authService;
+    }
+
+    private String clientId() {
+        return socket.getRemoteSocketAddress().toString();
+    }
+
+    private void send(String message) {
+        out.println(message);
+        gui.log(clientId() + " <- " + message);
     }
 
     @Override
@@ -192,8 +250,6 @@ class SmtpSessionGUI extends Thread {
 
             String line;
             while (gui.isRunning() && (line = in.readLine()) != null) {
-
-                // Log every incoming client command with IP:port
                 gui.log(clientId() + " -> " + line);
 
                 if (state == SmtpState.DATA_RECEIVING) {
@@ -212,30 +268,36 @@ class SmtpSessionGUI extends Thread {
                 String arg = extractArgument(line);
 
                 switch (command) {
-                    case "HELO": case "EHLO": handleHelo(arg); break;
-                    case "MAIL": handleMailFrom(arg); break;
-                    case "RCPT": handleRcptTo(arg); break;
-                    case "DATA": handleData(); break;
-                    case "QUIT": handleQuit(); return;
-                    default: send("500 Command unrecognized"); break;
+                    case "HELO":
+                    case "EHLO":
+                        handleHelo(arg);
+                        break;
+                    case "MAIL":
+                        handleMailFrom(arg);
+                        break;
+                    case "RCPT":
+                        handleRcptTo(arg);
+                        break;
+                    case "DATA":
+                        handleData();
+                        break;
+                    case "QUIT":
+                        handleQuit();
+                        return;
+                    default:
+                        send("500 Command unrecognized");
+                        break;
                 }
             }
-
         } catch (IOException e) {
             gui.log(clientId() + " disconnected");
         } finally {
-            try { socket.close(); } catch (IOException ignored) {}
+            try {
+                socket.close();
+            } catch (IOException ignored) {
+            }
             gui.removeClient(socket);
         }
-    }
-
-    private String clientId() {
-        return socket.getRemoteSocketAddress().toString();
-    }
-
-    private void send(String message) {
-        out.println(message);
-        gui.log(clientId() + " -> " + message);
     }
 
     private void handleHelo(String arg) {
@@ -245,55 +307,89 @@ class SmtpSessionGUI extends Thread {
         send("250 Hello " + arg);
     }
 
+    // ------------------------------------------------------------------
+    // MODIFICATION : vérifie que l'expéditeur existe dans RMI
+    // ------------------------------------------------------------------
     private void handleMailFrom(String arg) {
-        if (!arg.toUpperCase().matches("^FROM:\\s*<[^>]+>$")) { send("501 Syntax error in parameters or arguments"); return; }
+        if (!arg.toUpperCase().matches("^FROM:\\s*<[^>]+>$")) {
+            send("501 Syntax error in parameters or arguments");
+            return;
+        }
+
         String email = arg.substring(5).trim();
-        email = email.substring(1, email.length()-1).trim();
-        sender = email;
+        email = email.substring(1, email.length() - 1).trim();
+
+        // *** Vérification RMI : l'expéditeur doit être un utilisateur connu ***
+        String username = email.split("@")[0];
+        try {
+            AuthService svc = getAuthService();
+            if (svc != null) {
+                boolean exists = svc.userExists(username);
+                gui.log(clientId() + " RMI userExists(" + username + ") -> " + exists);
+                if (!exists) {
+                    send("550 Sender rejected: unknown user '" + username + "'");
+                    return;
+                }
+            } else {
+                gui.log(clientId() + " WARN: RMI inaccessible, expéditeur accepté sans vérification.");
+            }
+        } catch (Exception e) {
+            gui.log(clientId() + " WARN: erreur RMI MAIL FROM : " + e.getMessage());
+            // fallback : on continue
+        }
+
+        sender = username;
         state = SmtpState.MAIL_FROM_SET;
         send("250 OK");
     }
 
+    // Inchangé par rapport à l'original
     private void handleRcptTo(String arg) {
-        if (state != SmtpState.MAIL_FROM_SET && state != SmtpState.RCPT_TO_SET) { send("503 Bad sequence of commands"); return; }
-        if (!arg.toUpperCase().startsWith("TO:")) { send("501 Syntax error in parameters or arguments"); return; }
+        if (state != SmtpState.MAIL_FROM_SET && state != SmtpState.RCPT_TO_SET) {
+            send("503 Bad sequence of commands");
+            return;
+        }
+        if (!arg.toUpperCase().startsWith("TO:")) {
+            send("501 Syntax error in parameters or arguments");
+            return;
+        }
         String email = arg.substring(3).trim();
-        recipients.add(email);
+        email = email.replaceAll("[<>]", ""); // Enlever les éventuels < >
+        String username = email.split("@")[0]; // Ne garder que la partie avant @
+        
+        // MODIFICATION : On enregistre seulement le "username"
+        recipients.add(username);
         state = SmtpState.RCPT_TO_SET;
         send("250 OK");
     }
 
     private void handleData() {
-        if (state != SmtpState.RCPT_TO_SET || recipients.isEmpty()) { send("503 Bad sequence of commands"); return; }
+        if (state != SmtpState.RCPT_TO_SET || recipients.isEmpty()) {
+            send("503 Bad sequence of commands");
+            return;
+        }
         state = SmtpState.DATA_RECEIVING;
         send("354 Start mail input; end with <CRLF>.<CRLF>");
     }
 
-    private void handleQuit() { send("221 smtp.example.com Service closing transmission channel"); }
+    private void handleQuit() {
+        send("221 smtp.example.com Service closing transmission channel");
+    }
 
-    private String extractToken(String line) { String[] parts = line.split(" "); return parts.length>0?parts[0]:""; }
+    private String extractToken(String line) {
+        String[] parts = line.split(" ");
+        return parts.length > 0 ? parts[0] : "";
+    }
 
-    private String extractArgument(String line) { int idx = line.indexOf(' '); return idx>0?line.substring(idx).trim():""; }
+    private String extractArgument(String line) {
+        int idx = line.indexOf(' ');
+        return idx > 0 ? line.substring(idx).trim() : "";
+    }
 
     private void storeEmail(String data) {
-        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         for (String recipient : recipients) {
-            String username = recipient.split("@")[0];
-            File userDir = new File("mailserver/"+username);
-            if (!userDir.exists()) userDir.mkdirs();
-            File emailFile = new File(userDir, timestamp+".txt");
-
-            try (PrintWriter writer = new PrintWriter(new FileWriter(emailFile))) {
-                writer.println("From: " + sender);
-                writer.println("To: " + String.join(", ", recipients));
-                writer.println("Date: " + new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss Z").format(new Date()));
-                writer.println("Subject: Test Email");
-                writer.println();
-                writer.print(data);
-                gui.log(clientId() + " Stored email for " + recipient + " in " + emailFile.getAbsolutePath());
-            } catch (IOException e) {
-                gui.log(clientId() + " Error storing email: " + e.getMessage());
-            }
+            DatabaseManager.getInstance().storeEmail(sender, recipient, "Email", data);
+            gui.log(clientId() + " Stored email for " + recipient + " in Database");
         }
     }
 }
