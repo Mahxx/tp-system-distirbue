@@ -1,0 +1,143 @@
+# Système de Messagerie Distribuée
+
+Projet réalisé dans le cadre du module **Systèmes Distribués**  
+**École Militaire Polytechnique (EMP)** – Département d’Informatique  
+**Année universitaire : 2025/2026**
+
+## Auteur
+
+- **Nom :** Bakouche
+- **Prénom :** Mahmoud
+
+---
+
+## Description
+
+Ce projet est une extension d’un **système de messagerie distribuée** développé en Java.  
+Il met en œuvre plusieurs composants réseau et applicatifs permettant l’envoi, la réception, la consultation et l’administration des emails dans une architecture distribuée.
+
+Le système repose sur :
+
+- un **serveur SMTP** pour l’envoi des messages,
+- un **serveur POP3** pour la récupération des emails,
+- un **serveur IMAP** pour une gestion avancée des boîtes mail,
+- un **serveur d’authentification RMI**,
+- une **base de données MySQL** pour le stockage centralisé,
+- une **interface Web** pour l’accès via navigateur,
+- des **clients JavaMail** pour tester SMTP / POP3 / IMAP,
+- un mécanisme de **load balancing** avec **NGINX / HAProxy**.
+
+Le sujet du TP demande justement d’étendre une plateforme Java existante avec IMAP, une interface Web, des clients applicatifs standards, et une architecture scalable avec répartition de charge. :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1} :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3}
+
+---
+
+## Fonctionnalités principales
+
+### 1. Protocoles de messagerie
+- Envoi d’emails via **SMTP**
+- Récupération de messages via **POP3**
+- Consultation avancée via **IMAP**
+- Gestion des commandes de base IMAP :
+  - `LOGIN`
+  - `SELECT`
+  - `FETCH`
+  - `STORE`
+  - `SEARCH`
+  - `LOGOUT` :contentReference[oaicite:4]{index=4}
+
+### 2. Authentification distribuée
+- Vérification des identifiants via **Java RMI**
+- Création, modification et suppression de comptes utilisateurs
+- Intégration des serveurs SMTP / POP3 / IMAP avec le service d’authentification :contentReference[oaicite:5]{index=5}
+
+### 3. Base de données MySQL
+- Centralisation des utilisateurs et des emails
+- Stockage des messages côté serveur
+- Récupération des messages via POP3 / IMAP
+- Procédures stockées pour :
+  - l’authentification,
+  - l’insertion d’emails,
+  - la récupération,
+  - la suppression,
+  - la mise à jour des mots de passe. :contentReference[oaicite:6]{index=6}
+
+### 4. Interface Web
+- Authentification utilisateur
+- Consultation de la boîte de réception
+- Lecture de messages
+- Suppression de messages
+- Envoi d’un nouvel email
+- Communication avec les services existants via API REST / HTTP JSON, sans accès direct à la base de données depuis la couche Web. :contentReference[oaicite:7]{index=7} :contentReference[oaicite:8]{index=8}
+
+### 5. Clients JavaMail
+- Client SMTP
+- Client POP3
+- Client IMAP
+- Tests d’interopérabilité avec les serveurs développés. :contentReference[oaicite:9]{index=9}
+
+### 6. Scalabilité et Load Balancing
+- Déploiement de plusieurs instances serveur
+- Répartition de charge **Round Robin**
+- Reverse proxy via **NGINX** ou **HAProxy**
+- Tolérance aux pannes et continuité de service. :contentReference[oaicite:10]{index=10}
+
+---
+
+## Architecture générale
+
+Le système suit une architecture distribuée où plusieurs services collaborent :
+
+- **Client** → envoi/réception d’emails
+- **Serveur SMTP** → envoi des messages
+- **Serveur POP3 / IMAP** → récupération et consultation
+- **Serveur RMI** → authentification
+- **Base de données MySQL** → stockage centralisé
+- **Interface Web / API REST** → accès navigateur
+- **Load Balancer** → distribution des requêtes
+
+---
+
+## Technologies utilisées
+
+- **Java 17**
+- **Maven**
+- **Spring Boot**
+- **Spring Web**
+- **Spring Data JPA**
+- **Spring Security**
+- **MySQL**
+- **JDBC**
+- **Java RMI**
+- **Jakarta Mail (JavaMail)**
+- **JWT**
+- **NGINX / HAProxy**
+- **HTML / CSS / JavaScript**
+
+---
+
+## Structure du projet
+
+```bash
+src/main/java/org/example/
+├── AuthServer.java
+├── AuthService.java
+├── AuthServiceImpl.java
+├── DatabaseManager.java
+├── EmailMessage.java
+├── SmtpServer.java
+├── Pop3Server.java
+├── ImapServer.java
+├── SmtpServerGUI.java
+├── Pop3ServerGUI.java
+├── ImapServerGUI.java
+├── AdminClient.java
+├── TcpLoadBalancer.java
+├── clients/
+│   ├── SmtpClient.java
+│   ├── Pop3Client.java
+│   ├── ImapClient.java
+│   └── MailClientGUI.java
+└── web/
+    ├── WebApplication.java
+    ├── MailController.java
+    └── JwtUtil.java
