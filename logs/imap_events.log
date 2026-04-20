@@ -4228,3 +4228,365 @@
 [14:35:32] /127.0.0.1:63732 -> A2 LOGOUT
 [14:35:32] Server -> * BYE IMAP4rev2 Server logging out
 [14:35:32] Server -> A2 OK LOGOUT completed
+[16:01:02] Server error: Address already in use: bind
+[16:04:17] Server error: Address already in use: bind
+[16:05:34] IMAP Server started on port 1432
+[16:05:35] IMAP Server started on port 1431
+[16:05:48] /127.0.0.1:64057 connected
+[16:05:49] Server -> * OK IMAP4rev2 Service Ready
+[16:05:49] /127.0.0.1:64057 -> A0 CAPABILITY
+[16:05:49] Server -> * CAPABILITY IMAP4rev1
+[16:05:49] Server -> A0 OK CAPABILITY completed
+[16:05:49] /127.0.0.1:64057 -> A1 LOGIN mahmoud 2003
+[16:05:49] /127.0.0.1:64057 Connecté au service RMI
+[16:05:52] /127.0.0.1:64063 connected
+[16:05:52] Server -> * OK IMAP4rev2 Service Ready
+[16:05:52] /127.0.0.1:64063 -> A0 CAPABILITY
+[16:05:52] Server -> * CAPABILITY IMAP4rev1
+[16:05:52] Server -> A0 OK CAPABILITY completed
+[16:05:52] /127.0.0.1:64063 -> A1 LOGIN mahmoud 2003
+[16:05:52] /127.0.0.1:64063 Connecté au service RMI
+[16:05:53] /127.0.0.1:64057 RMI authenticate(mahmoud) -> true
+[16:05:53] Server -> A1 OK LOGIN completed
+[16:05:53] /127.0.0.1:64057 session closed unexpectedly
+[16:05:53] /127.0.0.1:64063 RMI authenticate(mahmoud) -> true
+[16:05:53] Server -> A1 OK LOGIN completed
+[16:05:53] /127.0.0.1:64063 -> A2 LOGOUT
+[16:05:53] Server -> * BYE IMAP4rev2 Server logging out
+[16:05:53] Server -> A2 OK LOGOUT completed
+[16:05:53] /127.0.0.1:53277 connected
+[16:05:53] Server -> * OK IMAP4rev2 Service Ready
+[16:05:53] /127.0.0.1:53277 -> A0 CAPABILITY
+[16:05:53] Server -> * CAPABILITY IMAP4rev1
+[16:05:53] Server -> A0 OK CAPABILITY completed
+[16:05:53] /127.0.0.1:53277 -> A1 LOGIN mahmoud 2003
+[16:05:54] /127.0.0.1:53277 Connecté au service RMI
+[16:05:54] /127.0.0.1:53277 RMI authenticate(mahmoud) -> true
+[16:05:54] Server -> A1 OK LOGIN completed
+[16:05:54] /127.0.0.1:53277 -> A2 LOGOUT
+[16:05:54] Server -> * BYE IMAP4rev2 Server logging out
+[16:05:54] Server -> A2 OK LOGOUT completed
+[16:05:54] /127.0.0.1:52534 connected
+[16:05:54] Server -> * OK IMAP4rev2 Service Ready
+[16:05:54] /127.0.0.1:52534 -> A0 CAPABILITY
+[16:05:54] Server -> * CAPABILITY IMAP4rev1
+[16:05:54] Server -> A0 OK CAPABILITY completed
+[16:05:54] /127.0.0.1:52534 -> A1 LOGIN mahmoud 2003
+[16:05:54] /127.0.0.1:52534 Connecté au service RMI
+[16:05:54] /127.0.0.1:52534 RMI authenticate(mahmoud) -> true
+[16:05:54] Server -> A1 OK LOGIN completed
+[16:05:54] /127.0.0.1:52534 -> A2 LOGOUT
+[16:05:54] Server -> * BYE IMAP4rev2 Server logging out
+[16:05:54] Server -> A2 OK LOGOUT completed
+[16:05:54] /127.0.0.1:52537 connected
+[16:05:54] Server -> * OK IMAP4rev2 Service Ready
+[16:05:54] /127.0.0.1:52537 -> A0 CAPABILITY
+[16:05:54] Server -> * CAPABILITY IMAP4rev1
+[16:05:54] Server -> A0 OK CAPABILITY completed
+[16:05:54] /127.0.0.1:52537 -> A1 LOGIN mahmoud 2003
+[16:05:54] /127.0.0.1:52537 Connecté au service RMI
+[16:05:54] /127.0.0.1:52537 RMI authenticate(mahmoud) -> true
+[16:05:54] Server -> A1 OK LOGIN completed
+[16:05:54] /127.0.0.1:52537 -> A2 LOGOUT
+[16:05:54] Server -> * BYE IMAP4rev2 Server logging out
+[16:05:54] Server -> A2 OK LOGOUT completed
+[16:05:54] /127.0.0.1:52540 connected
+[16:05:54] Server -> * OK IMAP4rev2 Service Ready
+[16:05:54] /127.0.0.1:52540 -> A0 CAPABILITY
+[16:05:54] Server -> * CAPABILITY IMAP4rev1
+[16:05:54] Server -> A0 OK CAPABILITY completed
+[16:05:54] /127.0.0.1:52540 -> A1 LOGIN mahmoud 2003
+[16:05:54] /127.0.0.1:52540 Connecté au service RMI
+[16:05:54] /127.0.0.1:52540 RMI authenticate(mahmoud) -> true
+[16:05:54] Server -> A1 OK LOGIN completed
+[16:05:54] /127.0.0.1:52540 -> A2 LOGOUT
+[16:05:54] Server -> * BYE IMAP4rev2 Server logging out
+[16:05:54] Server -> A2 OK LOGOUT completed
+[16:05:54] /127.0.0.1:52546 connected
+[16:05:54] Server -> * OK IMAP4rev2 Service Ready
+[16:05:54] /127.0.0.1:52546 -> A0 CAPABILITY
+[16:05:54] Server -> * CAPABILITY IMAP4rev1
+[16:05:54] Server -> A0 OK CAPABILITY completed
+[16:05:54] /127.0.0.1:52546 -> A1 LOGIN mahmoud 2003
+[16:05:54] /127.0.0.1:52546 Connecté au service RMI
+[16:05:55] /127.0.0.1:52546 RMI authenticate(mahmoud) -> true
+[16:05:55] Server -> A1 OK LOGIN completed
+[16:05:55] /127.0.0.1:52546 -> A2 LOGOUT
+[16:05:55] Server -> * BYE IMAP4rev2 Server logging out
+[16:05:55] Server -> A2 OK LOGOUT completed
+[16:05:55] /127.0.0.1:52549 connected
+[16:05:55] Server -> * OK IMAP4rev2 Service Ready
+[16:05:55] /127.0.0.1:52549 -> A0 CAPABILITY
+[16:05:55] Server -> * CAPABILITY IMAP4rev1
+[16:05:55] Server -> A0 OK CAPABILITY completed
+[16:05:55] /127.0.0.1:52549 -> A1 LOGIN mahmoud 2003
+[16:05:55] /127.0.0.1:52549 Connecté au service RMI
+[16:05:55] /127.0.0.1:52549 RMI authenticate(mahmoud) -> true
+[16:05:55] Server -> A1 OK LOGIN completed
+[16:05:55] /127.0.0.1:52549 -> A2 LOGOUT
+[16:05:55] Server -> * BYE IMAP4rev2 Server logging out
+[16:05:55] Server -> A2 OK LOGOUT completed
+[16:05:55] /127.0.0.1:54291 connected
+[16:05:55] Server -> * OK IMAP4rev2 Service Ready
+[16:05:55] /127.0.0.1:54291 -> A0 CAPABILITY
+[16:05:55] Server -> * CAPABILITY IMAP4rev1
+[16:05:55] Server -> A0 OK CAPABILITY completed
+[16:05:55] /127.0.0.1:54291 -> A1 LOGIN mahmoud 2003
+[16:05:55] /127.0.0.1:54291 Connecté au service RMI
+[16:05:55] /127.0.0.1:54291 RMI authenticate(mahmoud) -> true
+[16:05:55] Server -> A1 OK LOGIN completed
+[16:05:55] /127.0.0.1:54291 -> A2 LOGOUT
+[16:05:55] Server -> * BYE IMAP4rev2 Server logging out
+[16:05:55] Server -> A2 OK LOGOUT completed
+[16:05:55] /127.0.0.1:59746 connected
+[16:05:55] Server -> * OK IMAP4rev2 Service Ready
+[16:05:55] /127.0.0.1:59746 -> A0 CAPABILITY
+[16:05:55] Server -> * CAPABILITY IMAP4rev1
+[16:05:55] Server -> A0 OK CAPABILITY completed
+[16:05:55] /127.0.0.1:59746 -> A1 LOGIN mahmoud 2003
+[16:05:55] /127.0.0.1:59746 Connecté au service RMI
+[16:05:55] /127.0.0.1:59746 RMI authenticate(mahmoud) -> true
+[16:05:55] Server -> A1 OK LOGIN completed
+[16:05:55] /127.0.0.1:59746 -> A2 LOGOUT
+[16:05:55] Server -> * BYE IMAP4rev2 Server logging out
+[16:05:55] Server -> A2 OK LOGOUT completed
+[16:06:13] /127.0.0.1:59753 connected
+[16:06:13] Server -> * OK IMAP4rev2 Service Ready
+[16:06:13] /127.0.0.1:59753 -> A0 CAPABILITY
+[16:06:13] Server -> * CAPABILITY IMAP4rev1
+[16:06:13] Server -> A0 OK CAPABILITY completed
+[16:06:13] /127.0.0.1:59753 -> A1 LOGIN mahmoud 2003
+[16:06:13] /127.0.0.1:59753 Connecté au service RMI
+[16:06:13] /127.0.0.1:59753 RMI authenticate(mahmoud) -> true
+[16:06:13] Server -> A1 OK LOGIN completed
+[16:06:13] /127.0.0.1:59753 -> A2 LOGOUT
+[16:06:13] Server -> * BYE IMAP4rev2 Server logging out
+[16:06:13] Server -> A2 OK LOGOUT completed
+[16:06:13] /127.0.0.1:59756 connected
+[16:06:13] Server -> * OK IMAP4rev2 Service Ready
+[16:06:13] /127.0.0.1:59756 -> A0 CAPABILITY
+[16:06:13] Server -> * CAPABILITY IMAP4rev1
+[16:06:13] Server -> A0 OK CAPABILITY completed
+[16:06:13] /127.0.0.1:59756 -> A1 LOGIN mahmoud 2003
+[16:06:13] /127.0.0.1:59756 Connecté au service RMI
+[16:06:13] /127.0.0.1:59756 RMI authenticate(mahmoud) -> true
+[16:06:13] Server -> A1 OK LOGIN completed
+[16:06:13] /127.0.0.1:59756 -> A2 LOGOUT
+[16:06:13] Server -> * BYE IMAP4rev2 Server logging out
+[16:06:13] Server -> A2 OK LOGOUT completed
+[16:06:13] /127.0.0.1:59759 connected
+[16:06:13] Server -> * OK IMAP4rev2 Service Ready
+[16:06:13] /127.0.0.1:59759 -> A0 CAPABILITY
+[16:06:13] Server -> * CAPABILITY IMAP4rev1
+[16:06:13] Server -> A0 OK CAPABILITY completed
+[16:06:13] /127.0.0.1:59759 -> A1 LOGIN mahmoud 2003
+[16:06:13] /127.0.0.1:59759 Connecté au service RMI
+[16:06:13] /127.0.0.1:59759 RMI authenticate(mahmoud) -> true
+[16:06:13] Server -> A1 OK LOGIN completed
+[16:06:13] /127.0.0.1:59759 -> A2 LOGOUT
+[16:06:13] Server -> * BYE IMAP4rev2 Server logging out
+[16:06:13] Server -> A2 OK LOGOUT completed
+[16:06:13] /127.0.0.1:59762 connected
+[16:06:13] Server -> * OK IMAP4rev2 Service Ready
+[16:06:13] /127.0.0.1:59762 -> A0 CAPABILITY
+[16:06:13] Server -> * CAPABILITY IMAP4rev1
+[16:06:13] Server -> A0 OK CAPABILITY completed
+[16:06:13] /127.0.0.1:59762 -> A1 LOGIN mahmoud 2003
+[16:06:13] /127.0.0.1:59762 Connecté au service RMI
+[16:06:14] /127.0.0.1:59762 RMI authenticate(mahmoud) -> true
+[16:06:14] Server -> A1 OK LOGIN completed
+[16:06:14] /127.0.0.1:59762 -> A2 LOGOUT
+[16:06:14] Server -> * BYE IMAP4rev2 Server logging out
+[16:06:14] Server -> A2 OK LOGOUT completed
+[16:06:14] /127.0.0.1:59765 connected
+[16:06:14] Server -> * OK IMAP4rev2 Service Ready
+[16:06:14] /127.0.0.1:59765 -> A0 CAPABILITY
+[16:06:14] Server -> * CAPABILITY IMAP4rev1
+[16:06:14] Server -> A0 OK CAPABILITY completed
+[16:06:14] /127.0.0.1:59765 -> A1 LOGIN mahmoud 2003
+[16:06:14] /127.0.0.1:59765 Connecté au service RMI
+[16:06:14] /127.0.0.1:59765 RMI authenticate(mahmoud) -> true
+[16:06:14] Server -> A1 OK LOGIN completed
+[16:06:14] /127.0.0.1:59765 -> A2 LOGOUT
+[16:06:14] Server -> * BYE IMAP4rev2 Server logging out
+[16:06:14] Server -> A2 OK LOGOUT completed
+[16:06:14] /127.0.0.1:59768 connected
+[16:06:14] Server -> * OK IMAP4rev2 Service Ready
+[16:06:14] /127.0.0.1:59768 -> A0 CAPABILITY
+[16:06:14] Server -> * CAPABILITY IMAP4rev1
+[16:06:14] Server -> A0 OK CAPABILITY completed
+[16:06:14] /127.0.0.1:59768 -> A1 LOGIN mahmoud 2003
+[16:06:14] /127.0.0.1:59768 Connecté au service RMI
+[16:06:14] /127.0.0.1:59768 RMI authenticate(mahmoud) -> true
+[16:06:14] Server -> A1 OK LOGIN completed
+[16:06:14] /127.0.0.1:59768 -> A2 LOGOUT
+[16:06:14] Server -> * BYE IMAP4rev2 Server logging out
+[16:06:14] Server -> A2 OK LOGOUT completed
+[16:06:14] /127.0.0.1:59771 connected
+[16:06:14] Server -> * OK IMAP4rev2 Service Ready
+[16:06:14] /127.0.0.1:59771 -> A0 CAPABILITY
+[16:06:14] Server -> * CAPABILITY IMAP4rev1
+[16:06:14] Server -> A0 OK CAPABILITY completed
+[16:06:14] /127.0.0.1:59771 -> A1 LOGIN mahmoud 2003
+[16:06:14] /127.0.0.1:59771 Connecté au service RMI
+[16:06:14] /127.0.0.1:59771 RMI authenticate(mahmoud) -> true
+[16:06:14] Server -> A1 OK LOGIN completed
+[16:06:14] /127.0.0.1:59771 -> A2 LOGOUT
+[16:06:14] Server -> * BYE IMAP4rev2 Server logging out
+[16:06:14] Server -> A2 OK LOGOUT completed
+[16:06:14] /127.0.0.1:59774 connected
+[16:06:14] Server -> * OK IMAP4rev2 Service Ready
+[16:06:14] /127.0.0.1:59774 -> A0 CAPABILITY
+[16:06:14] Server -> * CAPABILITY IMAP4rev1
+[16:06:14] Server -> A0 OK CAPABILITY completed
+[16:06:14] /127.0.0.1:59774 -> A1 LOGIN mahmoud 2003
+[16:06:14] /127.0.0.1:59774 Connecté au service RMI
+[16:06:14] /127.0.0.1:59774 RMI authenticate(mahmoud) -> true
+[16:06:14] Server -> A1 OK LOGIN completed
+[16:06:14] /127.0.0.1:59774 -> A2 LOGOUT
+[16:06:14] Server -> * BYE IMAP4rev2 Server logging out
+[16:06:14] Server -> A2 OK LOGOUT completed
+[16:06:14] /127.0.0.1:59777 connected
+[16:06:14] Server -> * OK IMAP4rev2 Service Ready
+[16:06:14] /127.0.0.1:59777 -> A0 CAPABILITY
+[16:06:14] Server -> * CAPABILITY IMAP4rev1
+[16:06:14] Server -> A0 OK CAPABILITY completed
+[16:06:14] /127.0.0.1:59777 -> A1 LOGIN mahmoud 2003
+[16:06:14] /127.0.0.1:59777 Connecté au service RMI
+[16:06:14] /127.0.0.1:59777 RMI authenticate(mahmoud) -> true
+[16:06:14] Server -> A1 OK LOGIN completed
+[16:06:14] /127.0.0.1:59777 -> A2 LOGOUT
+[16:06:14] Server -> * BYE IMAP4rev2 Server logging out
+[16:06:14] Server -> A2 OK LOGOUT completed
+[16:06:14] /127.0.0.1:59780 connected
+[16:06:14] Server -> * OK IMAP4rev2 Service Ready
+[16:06:14] /127.0.0.1:59780 -> A0 CAPABILITY
+[16:06:14] Server -> * CAPABILITY IMAP4rev1
+[16:06:14] Server -> A0 OK CAPABILITY completed
+[16:06:14] /127.0.0.1:59780 -> A1 LOGIN mahmoud 2003
+[16:06:14] /127.0.0.1:59780 Connecté au service RMI
+[16:06:14] /127.0.0.1:59780 RMI authenticate(mahmoud) -> true
+[16:06:14] Server -> A1 OK LOGIN completed
+[16:06:14] /127.0.0.1:59780 -> A2 LOGOUT
+[16:06:14] Server -> * BYE IMAP4rev2 Server logging out
+[16:06:14] Server -> A2 OK LOGOUT completed
+[16:54:18] /127.0.0.1:64086 connected
+[16:54:18] Server -> * OK IMAP4rev2 Service Ready
+[16:54:18] /127.0.0.1:64086 -> A0 CAPABILITY
+[16:54:18] Server -> * CAPABILITY IMAP4rev1
+[16:54:18] Server -> A0 OK CAPABILITY completed
+[16:54:18] /127.0.0.1:64086 -> A1 LOGIN mahmoud 2003
+[16:54:18] /127.0.0.1:64086 Connecté au service RMI
+[16:54:18] /127.0.0.1:64086 RMI authenticate(mahmoud) -> true
+[16:54:18] Server -> A1 OK LOGIN completed
+[16:54:18] /127.0.0.1:64086 -> A2 LOGOUT
+[16:54:18] Server -> * BYE IMAP4rev2 Server logging out
+[16:54:18] Server -> A2 OK LOGOUT completed
+[16:54:18] /127.0.0.1:64091 connected
+[16:54:18] Server -> * OK IMAP4rev2 Service Ready
+[16:54:18] /127.0.0.1:64091 -> A0 CAPABILITY
+[16:54:18] Server -> * CAPABILITY IMAP4rev1
+[16:54:18] Server -> A0 OK CAPABILITY completed
+[16:54:18] /127.0.0.1:64091 -> A1 LOGIN mahmoud 2003
+[16:54:18] /127.0.0.1:64091 Connecté au service RMI
+[16:54:18] /127.0.0.1:64091 RMI authenticate(mahmoud) -> true
+[16:54:18] Server -> A1 OK LOGIN completed
+[16:54:18] /127.0.0.1:64091 -> A2 LOGOUT
+[16:54:18] Server -> * BYE IMAP4rev2 Server logging out
+[16:54:18] Server -> A2 OK LOGOUT completed
+[16:54:18] /127.0.0.1:64096 connected
+[16:54:18] Server -> * OK IMAP4rev2 Service Ready
+[16:54:18] /127.0.0.1:64096 -> A0 CAPABILITY
+[16:54:18] Server -> * CAPABILITY IMAP4rev1
+[16:54:18] Server -> A0 OK CAPABILITY completed
+[16:54:18] /127.0.0.1:64096 -> A1 LOGIN mahmoud 2003
+[16:54:18] /127.0.0.1:64096 Connecté au service RMI
+[16:54:18] /127.0.0.1:64096 RMI authenticate(mahmoud) -> true
+[16:54:18] Server -> A1 OK LOGIN completed
+[16:54:18] /127.0.0.1:64096 -> A2 LOGOUT
+[16:54:18] Server -> * BYE IMAP4rev2 Server logging out
+[16:54:18] Server -> A2 OK LOGOUT completed
+[16:54:18] /127.0.0.1:64099 connected
+[16:54:18] Server -> * OK IMAP4rev2 Service Ready
+[16:54:18] /127.0.0.1:64099 -> A0 CAPABILITY
+[16:54:18] Server -> * CAPABILITY IMAP4rev1
+[16:54:18] Server -> A0 OK CAPABILITY completed
+[16:54:18] /127.0.0.1:64099 -> A1 LOGIN mahmoud 2003
+[16:54:18] /127.0.0.1:64099 Connecté au service RMI
+[16:54:18] /127.0.0.1:64099 RMI authenticate(mahmoud) -> true
+[16:54:18] Server -> A1 OK LOGIN completed
+[16:54:18] /127.0.0.1:64099 -> A2 LOGOUT
+[16:54:18] Server -> * BYE IMAP4rev2 Server logging out
+[16:54:18] Server -> A2 OK LOGOUT completed
+[16:54:18] /127.0.0.1:64102 connected
+[16:54:18] Server -> * OK IMAP4rev2 Service Ready
+[16:54:18] /127.0.0.1:64102 -> A0 CAPABILITY
+[16:54:18] Server -> * CAPABILITY IMAP4rev1
+[16:54:18] Server -> A0 OK CAPABILITY completed
+[16:54:18] /127.0.0.1:64102 -> A1 LOGIN mahmoud 2003
+[16:54:18] /127.0.0.1:64102 Connecté au service RMI
+[16:54:19] /127.0.0.1:64102 RMI authenticate(mahmoud) -> true
+[16:54:19] Server -> A1 OK LOGIN completed
+[16:54:19] /127.0.0.1:64102 -> A2 LOGOUT
+[16:54:19] Server -> * BYE IMAP4rev2 Server logging out
+[16:54:19] Server -> A2 OK LOGOUT completed
+[16:54:19] /127.0.0.1:64106 connected
+[16:54:19] Server -> * OK IMAP4rev2 Service Ready
+[16:54:19] /127.0.0.1:64106 -> A0 CAPABILITY
+[16:54:19] Server -> * CAPABILITY IMAP4rev1
+[16:54:19] Server -> A0 OK CAPABILITY completed
+[16:54:19] /127.0.0.1:64106 -> A1 LOGIN mahmoud 2003
+[16:54:19] /127.0.0.1:64106 Connecté au service RMI
+[16:54:19] /127.0.0.1:64106 RMI authenticate(mahmoud) -> true
+[16:54:19] Server -> A1 OK LOGIN completed
+[16:54:19] /127.0.0.1:64106 -> A2 LOGOUT
+[16:54:19] Server -> * BYE IMAP4rev2 Server logging out
+[16:54:19] Server -> A2 OK LOGOUT completed
+[16:54:19] /127.0.0.1:64112 connected
+[16:54:19] Server -> * OK IMAP4rev2 Service Ready
+[16:54:19] /127.0.0.1:64112 -> A0 CAPABILITY
+[16:54:19] Server -> * CAPABILITY IMAP4rev1
+[16:54:19] Server -> A0 OK CAPABILITY completed
+[16:54:19] /127.0.0.1:64112 -> A1 LOGIN mahmoud 2003
+[16:54:19] /127.0.0.1:64112 Connecté au service RMI
+[16:54:19] /127.0.0.1:64112 RMI authenticate(mahmoud) -> true
+[16:54:19] Server -> A1 OK LOGIN completed
+[16:54:19] /127.0.0.1:64112 -> A2 LOGOUT
+[16:54:19] Server -> * BYE IMAP4rev2 Server logging out
+[16:54:19] Server -> A2 OK LOGOUT completed
+[16:54:19] /127.0.0.1:64115 connected
+[16:54:19] Server -> * OK IMAP4rev2 Service Ready
+[16:54:19] /127.0.0.1:64115 -> A0 CAPABILITY
+[16:54:19] Server -> * CAPABILITY IMAP4rev1
+[16:54:19] Server -> A0 OK CAPABILITY completed
+[16:54:19] /127.0.0.1:64115 -> A1 LOGIN mahmoud 2003
+[16:54:19] /127.0.0.1:64115 Connecté au service RMI
+[16:54:19] /127.0.0.1:64115 RMI authenticate(mahmoud) -> true
+[16:54:19] Server -> A1 OK LOGIN completed
+[16:54:19] /127.0.0.1:64115 -> A2 LOGOUT
+[16:54:19] Server -> * BYE IMAP4rev2 Server logging out
+[16:54:19] Server -> A2 OK LOGOUT completed
+[16:54:19] /127.0.0.1:64118 connected
+[16:54:19] Server -> * OK IMAP4rev2 Service Ready
+[16:54:19] /127.0.0.1:64118 -> A0 CAPABILITY
+[16:54:19] Server -> * CAPABILITY IMAP4rev1
+[16:54:19] Server -> A0 OK CAPABILITY completed
+[16:54:19] /127.0.0.1:64118 -> A1 LOGIN mahmoud 2003
+[16:54:19] /127.0.0.1:64118 Connecté au service RMI
+[16:54:19] /127.0.0.1:64118 RMI authenticate(mahmoud) -> true
+[16:54:19] Server -> A1 OK LOGIN completed
+[16:54:19] /127.0.0.1:64118 -> A2 LOGOUT
+[16:54:19] Server -> * BYE IMAP4rev2 Server logging out
+[16:54:19] Server -> A2 OK LOGOUT completed
+[16:54:19] /127.0.0.1:64121 connected
+[16:54:19] Server -> * OK IMAP4rev2 Service Ready
+[16:54:19] /127.0.0.1:64121 -> A0 CAPABILITY
+[16:54:19] Server -> * CAPABILITY IMAP4rev1
+[16:54:19] Server -> A0 OK CAPABILITY completed
+[16:54:19] /127.0.0.1:64121 -> A1 LOGIN mahmoud 2003
+[16:54:19] /127.0.0.1:64121 Connecté au service RMI
+[16:54:19] /127.0.0.1:64121 RMI authenticate(mahmoud) -> true
+[16:54:19] Server -> A1 OK LOGIN completed
+[16:54:19] /127.0.0.1:64121 -> A2 LOGOUT
+[16:54:19] Server -> * BYE IMAP4rev2 Server logging out
+[16:54:19] Server -> A2 OK LOGOUT completed

@@ -1809,3 +1809,7 @@
 [13:16:27] Server stopped
 [14:02:08] POP3 Server started on port 1111
 [14:02:10] POP3 Server started on port 1112
+[16:01:05] Server error: Address already in use: bind
+[16:04:19] Server error: Address already in use: bind
+[16:05:37] POP3 Server started on port 1112
+[16:05:38] POP3 Server started on port 1111

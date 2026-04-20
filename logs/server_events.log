@@ -1396,3 +1396,29 @@
 [13:14:07] SMTP Server started on port 25
 [14:02:16] SMTP Server started on port 2527
 [14:02:18] SMTP Server started on port 2526
+[16:01:04] Server error: Address already in use: bind
+[16:04:21] Server error: Address already in use: bind
+[16:05:40] SMTP Server started on port 2527
+[16:05:41] SMTP Server started on port 2526
+[16:10:22] /127.0.0.1:59890 connected
+[16:10:22] /127.0.0.1:59890 <- 220 smtp.example.com Service Ready
+[16:10:22] /127.0.0.1:59890 -> HELO web-client
+[16:10:22] /127.0.0.1:59890 <- 250 Hello web-client
+[16:10:22] /127.0.0.1:59890 -> MAIL FROM:<charara@example.com>
+[16:10:22] /127.0.0.1:59890 Connecté au service RMI
+[16:10:22] /127.0.0.1:59890 RMI userExists(charara) -> true
+[16:10:22] /127.0.0.1:59890 <- 250 OK
+[16:10:22] /127.0.0.1:59890 -> RCPT TO:<mahmoud@gmail.com@example.com>
+[16:10:22] /127.0.0.1:59890 <- 250 OK
+[16:10:22] /127.0.0.1:59890 -> DATA
+[16:10:22] /127.0.0.1:59890 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[16:10:22] /127.0.0.1:59890 -> Subject: tast
+[16:10:22] /127.0.0.1:59890 -> From: charara@example.com
+[16:10:22] /127.0.0.1:59890 -> To: mahmoud@gmail.com@example.com
+[16:10:22] /127.0.0.1:59890 -> 
+[16:10:22] /127.0.0.1:59890 -> tast
+[16:10:22] /127.0.0.1:59890 -> .
+[16:10:24] /127.0.0.1:59890 Stored email for mahmoud in Database
+[16:10:24] /127.0.0.1:59890 <- 250 OK: Message accepted for delivery
+[16:10:24] /127.0.0.1:59890 -> QUIT
+[16:10:24] /127.0.0.1:59890 <- 221 smtp.example.com Service closing transmission channel

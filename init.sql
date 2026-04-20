@@ -22,10 +22,21 @@ CREATE TABLE IF NOT EXISTS emails (
 DELIMITER //
 
 DROP PROCEDURE IF EXISTS authenticate_user //
-CREATE PROCEDURE authenticate_user(IN p_username VARCHAR(100), IN p_password VARCHAR(255), OUT p_is_valid BOOLEAN)
+CREATE PROCEDURE authenticate_user(
+    IN p_username VARCHAR(100),
+    IN p_password VARCHAR(255),
+    OUT p_is_valid BOOLEAN
+)
 BEGIN
-    SELECT COUNT(*) INTO @cnt FROM users WHERE username = p_username AND password_hash = p_password;
-    IF @cnt > 0 THEN
+    DECLARE v_count INT DEFAULT 0;
+
+    SELECT COUNT(*)
+    INTO v_count
+    FROM users
+    WHERE username = p_username
+      AND password_hash = SHA2(p_password, 256);
+
+    IF v_count > 0 THEN
         SET p_is_valid = TRUE;
     ELSE
         SET p_is_valid = FALSE;
