@@ -1236,3 +1236,163 @@
 [23:51:29] /127.0.0.1:62089 <- 250 OK: Message accepted for delivery
 [23:51:29] /127.0.0.1:62089 -> QUIT
 [23:51:29] /127.0.0.1:62089 <- 221 smtp.example.com Service closing transmission channel
+[08:06:06] SMTP Server started on port 25
+[09:55:33] /[0:0:0:0:0:0:0:1]:54770 connected
+[09:55:33] /[0:0:0:0:0:0:0:1]:54770 <- 220 smtp.example.com Service Ready
+[09:55:33] /[0:0:0:0:0:0:0:1]:54770 disconnected
+[11:13:10] SMTP Server started on port 25
+[11:20:21] /[0:0:0:0:0:0:0:1]:55208 connected
+[11:20:21] /[0:0:0:0:0:0:0:1]:55208 <- 220 smtp.example.com Service Ready
+[11:22:49] /[0:0:0:0:0:0:0:1]:55208 -> DELETE FROM utilisateurs WHERE id = 3;
+[11:22:49] /[0:0:0:0:0:0:0:1]:55208 <- 500 Command unrecognized
+[11:22:54] /[0:0:0:0:0:0:0:1]:55208 -> quit
+[11:22:54] /[0:0:0:0:0:0:0:1]:55208 <- 500 Command unrecognized
+[11:22:56] /[0:0:0:0:0:0:0:1]:55208 -> quit
+[11:22:56] /[0:0:0:0:0:0:0:1]:55208 <- 221 smtp.example.com Service closing transmission channel
+[11:22:59] /[0:0:0:0:0:0:0:1]:63402 connected
+[11:22:59] /[0:0:0:0:0:0:0:1]:63402 <- 220 smtp.example.com Service Ready
+[11:23:07] /[0:0:0:0:0:0:0:1]:63402 -> EHLO localhost
+[11:23:07] /[0:0:0:0:0:0:0:1]:63402 <- 250 Hello localhost
+[11:23:39] /[0:0:0:0:0:0:0:1]:63402 -> MAIL FROM:<mahmoud@gmail.com>
+[11:23:40] /[0:0:0:0:0:0:0:1]:63402 Connecté au service RMI
+[11:23:40] /[0:0:0:0:0:0:0:1]:63402 RMI userExists(mahmoud) -> true
+[11:23:40] /[0:0:0:0:0:0:0:1]:63402 <- 250 OK
+[11:24:04] /[0:0:0:0:0:0:0:1]:63402 -> RCPT TO:<charara@gmail.com>
+[11:24:04] /[0:0:0:0:0:0:0:1]:63402 <- 250 OK
+[11:24:13] /[0:0:0:0:0:0:0:1]:63402 -> DATA
+[11:24:13] /[0:0:0:0:0:0:0:1]:63402 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[11:24:17] /[0:0:0:0:0:0:0:1]:63402 -> 123456789
+[11:24:18] /[0:0:0:0:0:0:0:1]:63402 -> .
+[11:24:20] /[0:0:0:0:0:0:0:1]:63402 Stored email for charara in Database
+[11:24:20] /[0:0:0:0:0:0:0:1]:63402 <- 250 OK: Message accepted for delivery
+[11:24:26] /[0:0:0:0:0:0:0:1]:63402 -> QUIT
+[11:24:26] /[0:0:0:0:0:0:0:1]:63402 <- 221 smtp.example.com Service closing transmission channel
+[11:32:36] SMTP Server started on port 25
+[12:06:25] SMTP Server started on port 25
+[12:27:22] /127.0.0.1:51001 connected
+[12:27:22] /127.0.0.1:51001 <- 220 smtp.example.com Service Ready
+[12:27:26] /127.0.0.1:51001 -> EHLO DESKTOP-TTJG3HH
+[12:27:26] /127.0.0.1:51001 <- 250 Hello DESKTOP-TTJG3HH
+[12:27:26] /127.0.0.1:51001 -> MAIL FROM:<mahmoud@example.com>
+[12:27:27] /127.0.0.1:51001 Connecté au service RMI
+[12:27:27] /127.0.0.1:51001 RMI userExists(mahmoud) -> true
+[12:27:27] /127.0.0.1:51001 <- 250 OK
+[12:27:27] /127.0.0.1:51001 -> RCPT TO:<charara@gmail.com>
+[12:27:27] /127.0.0.1:51001 <- 250 OK
+[12:27:27] /127.0.0.1:51001 -> DATA
+[12:27:27] /127.0.0.1:51001 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[12:27:27] /127.0.0.1:51001 -> Date: Mon, 20 Apr 2026 12:27:17 +0100 (CET)
+[12:27:27] /127.0.0.1:51001 -> From: mahmoud@example.com
+[12:27:27] /127.0.0.1:51001 -> To: charara@gmail.com
+[12:27:27] /127.0.0.1:51001 -> Message-ID: <910340462.0.1776684442252@DESKTOP-TTJG3HH>
+[12:27:27] /127.0.0.1:51001 -> Subject: test
+[12:27:27] /127.0.0.1:51001 -> MIME-Version: 1.0
+[12:27:27] /127.0.0.1:51001 -> Content-Type: text/plain; charset=UTF-8
+[12:27:27] /127.0.0.1:51001 -> Content-Transfer-Encoding: 7bit
+[12:27:27] /127.0.0.1:51001 -> 
+[12:27:27] /127.0.0.1:51001 -> test
+[12:27:27] /127.0.0.1:51001 -> .
+[12:27:27] /127.0.0.1:51001 Stored email for charara in Database
+[12:27:27] /127.0.0.1:51001 <- 250 OK: Message accepted for delivery
+[12:27:27] /127.0.0.1:51001 -> QUIT
+[12:27:27] /127.0.0.1:51001 <- 221 smtp.example.com Service closing transmission channel
+[12:41:18] /127.0.0.1:53183 connected
+[12:41:18] /127.0.0.1:53183 <- 220 smtp.example.com Service Ready
+[12:41:18] /127.0.0.1:53183 -> HELO web-client
+[12:41:18] /127.0.0.1:53183 <- 250 Hello web-client
+[12:41:18] /127.0.0.1:53183 -> MAIL FROM:<charara@example.com>
+[12:41:18] /127.0.0.1:53183 Connecté au service RMI
+[12:41:19] /127.0.0.1:53183 RMI userExists(charara) -> true
+[12:41:19] /127.0.0.1:53183 <- 250 OK
+[12:41:19] /127.0.0.1:53183 -> RCPT TO:<mahmoud@gmail.com@example.com>
+[12:41:19] /127.0.0.1:53183 <- 250 OK
+[12:41:19] /127.0.0.1:53183 -> DATA
+[12:41:19] /127.0.0.1:53183 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[12:41:19] /127.0.0.1:53183 -> Subject: examan
+[12:41:19] /127.0.0.1:53183 -> From: charara@example.com
+[12:41:19] /127.0.0.1:53183 -> To: mahmoud@gmail.com@example.com
+[12:41:19] /127.0.0.1:53183 -> 
+[12:41:19] /127.0.0.1:53183 -> examan
+[12:41:19] /127.0.0.1:53183 -> .
+[12:41:19] /127.0.0.1:53183 Stored email for mahmoud in Database
+[12:41:19] /127.0.0.1:53183 <- 250 OK: Message accepted for delivery
+[12:41:19] /127.0.0.1:53183 -> QUIT
+[12:41:19] /127.0.0.1:53183 <- 221 smtp.example.com Service closing transmission channel
+[12:42:49] /127.0.0.1:63829 connected
+[12:42:49] /127.0.0.1:63829 <- 220 smtp.example.com Service Ready
+[12:42:49] /127.0.0.1:63829 -> HELO web-client
+[12:42:49] /127.0.0.1:63829 <- 250 Hello web-client
+[12:42:49] /127.0.0.1:63829 -> MAIL FROM:<mahmoud@example.com>
+[12:42:49] /127.0.0.1:63829 Connecté au service RMI
+[12:42:49] /127.0.0.1:63829 RMI userExists(mahmoud) -> true
+[12:42:49] /127.0.0.1:63829 <- 250 OK
+[12:42:49] /127.0.0.1:63829 -> RCPT TO:<charara@gmail.com@example.com>
+[12:42:49] /127.0.0.1:63829 <- 250 OK
+[12:42:49] /127.0.0.1:63829 -> DATA
+[12:42:49] /127.0.0.1:63829 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[12:42:49] /127.0.0.1:63829 -> Subject: mahmoud
+[12:42:49] /127.0.0.1:63829 -> From: mahmoud@example.com
+[12:42:49] /127.0.0.1:63829 -> To: charara@gmail.com@example.com
+[12:42:49] /127.0.0.1:63829 -> 
+[12:42:49] /127.0.0.1:63829 -> mahmoud
+[12:42:49] /127.0.0.1:63829 -> .
+[12:42:49] /127.0.0.1:63829 Stored email for charara in Database
+[12:42:49] /127.0.0.1:63829 <- 250 OK: Message accepted for delivery
+[12:42:49] /127.0.0.1:63829 -> QUIT
+[12:42:49] /127.0.0.1:63829 <- 221 smtp.example.com Service closing transmission channel
+[13:03:36] /127.0.0.1:59642 connected
+[13:03:36] /127.0.0.1:59642 <- 220 smtp.example.com Service Ready
+[13:03:36] /127.0.0.1:59642 -> EHLO DESKTOP-TTJG3HH
+[13:03:36] /127.0.0.1:59642 <- 250 Hello DESKTOP-TTJG3HH
+[13:03:36] /127.0.0.1:59642 -> MAIL FROM:<mahmoud@example.com>
+[13:03:36] /127.0.0.1:59642 Connecté au service RMI
+[13:03:36] /127.0.0.1:59642 RMI userExists(mahmoud) -> true
+[13:03:36] /127.0.0.1:59642 <- 250 OK
+[13:03:36] /127.0.0.1:59642 -> RCPT TO:<charara@gmail.com>
+[13:03:36] /127.0.0.1:59642 <- 250 OK
+[13:03:36] /127.0.0.1:59642 -> DATA
+[13:03:36] /127.0.0.1:59642 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[13:03:36] /127.0.0.1:59642 -> Date: Mon, 20 Apr 2026 13:03:31 +0100 (CET)
+[13:03:36] /127.0.0.1:59642 -> From: mahmoud@example.com
+[13:03:36] /127.0.0.1:59642 -> To: charara@gmail.com
+[13:03:36] /127.0.0.1:59642 -> Message-ID: <1299868260.1.1776686616619@DESKTOP-TTJG3HH>
+[13:03:36] /127.0.0.1:59642 -> Subject: test
+[13:03:36] /127.0.0.1:59642 -> MIME-Version: 1.0
+[13:03:36] /127.0.0.1:59642 -> Content-Type: text/plain; charset=UTF-8
+[13:03:36] /127.0.0.1:59642 -> Content-Transfer-Encoding: 7bit
+[13:03:36] /127.0.0.1:59642 -> 
+[13:03:36] /127.0.0.1:59642 -> test
+[13:03:36] /127.0.0.1:59642 -> .
+[13:03:36] /127.0.0.1:59642 Stored email for charara in Database
+[13:03:36] /127.0.0.1:59642 <- 250 OK: Message accepted for delivery
+[13:03:36] /127.0.0.1:59642 -> QUIT
+[13:03:36] /127.0.0.1:59642 <- 221 smtp.example.com Service closing transmission channel
+[13:07:33] /127.0.0.1:59740 connected
+[13:07:33] /127.0.0.1:59740 <- 220 smtp.example.com Service Ready
+[13:07:33] /127.0.0.1:59740 -> EHLO DESKTOP-TTJG3HH
+[13:07:33] /127.0.0.1:59740 <- 250 Hello DESKTOP-TTJG3HH
+[13:07:33] /127.0.0.1:59740 -> MAIL FROM:<mahmoud@example.com>
+[13:07:33] /127.0.0.1:59740 Connecté au service RMI
+[13:07:33] /127.0.0.1:59740 RMI userExists(mahmoud) -> true
+[13:07:33] /127.0.0.1:59740 <- 250 OK
+[13:07:33] /127.0.0.1:59740 -> RCPT TO:<charara@gmail.com>
+[13:07:33] /127.0.0.1:59740 <- 250 OK
+[13:07:33] /127.0.0.1:59740 -> DATA
+[13:07:33] /127.0.0.1:59740 <- 354 Start mail input; end with <CRLF>.<CRLF>
+[13:07:33] /127.0.0.1:59740 -> Date: Mon, 20 Apr 2026 13:07:28 +0100 (CET)
+[13:07:33] /127.0.0.1:59740 -> From: mahmoud@example.com
+[13:07:33] /127.0.0.1:59740 -> To: charara@gmail.com
+[13:07:33] /127.0.0.1:59740 -> Message-ID: <1900245500.2.1776686853464@DESKTOP-TTJG3HH>
+[13:07:33] /127.0.0.1:59740 -> Subject: test
+[13:07:33] /127.0.0.1:59740 -> MIME-Version: 1.0
+[13:07:33] /127.0.0.1:59740 -> Content-Type: text/plain; charset=UTF-8
+[13:07:33] /127.0.0.1:59740 -> Content-Transfer-Encoding: 7bit
+[13:07:33] /127.0.0.1:59740 -> 
+[13:07:33] /127.0.0.1:59740 -> .
+[13:07:33] /127.0.0.1:59740 Stored email for charara in Database
+[13:07:33] /127.0.0.1:59740 <- 250 OK: Message accepted for delivery
+[13:07:33] /127.0.0.1:59740 -> QUIT
+[13:07:33] /127.0.0.1:59740 <- 221 smtp.example.com Service closing transmission channel
+[13:14:07] SMTP Server started on port 25
+[14:02:16] SMTP Server started on port 2527
+[14:02:18] SMTP Server started on port 2526

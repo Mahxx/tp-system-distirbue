@@ -18,12 +18,12 @@ public class DatabaseManager {
     }
 
     public boolean authenticateUser(String username, String passwordHash) {
-        try (Connection c = getConnection(); CallableStatement stmt = c.prepareCall("{CALL authenticate_user(?, ?, ?)}")) {
+        try (Connection c = getConnection(); PreparedStatement stmt = c.prepareStatement("SELECT 1 FROM users WHERE username = ? AND password_hash = ?")) {
             stmt.setString(1, username);
             stmt.setString(2, passwordHash);
-            stmt.registerOutParameter(3, Types.BOOLEAN);
-            stmt.execute();
-            return stmt.getBoolean(3);
+            try (ResultSet rs = stmt.executeQuery()) {
+                return rs.next();
+            }
         } catch (SQLException e) { 
             e.printStackTrace(); 
             return false; 
